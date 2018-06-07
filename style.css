@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300,500');
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,600');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Baumans');
+@import url('https://fonts.googleapis.com/css?family=Megrim');
+
 body {
     margin: 0;
     padding: 0;
@@ -6,56 +12,167 @@ body {
 }
 
 nav {
-    height: 60px;
     margin: 0;
     padding: 0;
+    height: 60px;
+    display: flex;
     background-color: #4b515b;
     box-shadow: 0 1px 1px 0 black;
 }
 
-.menu {
-    list-style-type: none;
-    padding: 0;
+.sections {
     margin: 0;
+    padding: 0;
     height: 100%;
-    width: 100%;
     display: flex;
     font-size: 30px;
     color: #c9cacc;
 }
 
-.menu li {
-    cursor: pointer;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sections > div {
     padding-bottom: 5px;
     margin-left: 50px;
+    height: 100%;
+    cursor: pointer;
     box-sizing: border-box;
 }
 
-.menu li:last-of-type {
-    margin-right: 20px;
+.sections > div > p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 100%;
+
 }
 
-.menu li:not(#options):hover {
-    color: #0a3a87;
+.sections > div:not(.active):hover {
+    color: #0096e8;
 }
 
-.menu .active {
-    color: #0a3a87;
-    border-bottom: #0a3a87 5px solid;
+.sections > .active {
+    color: #0096e8;
+    border-bottom: #0096e8 5px solid;
     padding-bottom: 0;
 }
 
-#options {
-    margin-left: auto;
-}
-
-#options img{
-    height: 20px;
+.options img{
+    cursor: pointer;
     width: 40px;
+    height: 20px;
     border-radius: 5px;
     border: #282f3a solid 1px;
+}
+
+.options {
+    background-color: #4b515b;
+    padding: 7px;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 15px;
+    /*border: 3px red solid;*/
+}
+
+.sub-menu {
+    margin-top: 5px;
+    padding: 0;
+    display: none;
+    width: 40px;
+}
+
+.options:hover {
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.options:hover > .sub-menu{
+    display: flex;
+}
+
+main {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3em;
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #afaeb2;
+}
+
+.content {
+    width: 500px;
+    margin-right: auto;
+}
+.photo {
+    position: relative;
+    left: -200px;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-right: -165px;
+}
+
+.photo > img {
+    height: 200px;
+    border-radius: 50%;
+    border: 2px #0096e8 solid;
+}
+.title {
+    display: inline-block
+}
+
+.title > h1 {
+    margin-top: 0;
+    font-family: 'Poiret One', cursive;
+    font-size: 85px;
+    margin-bottom: 5px;
+}
+
+.title > h2 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Baumans', cursive;
+    /*font-family: 'Megrim', cursive;*/
+}
+
+.mail {
+    margin-left: 0.7em
+}
+
+footer {
+    background-color: #0a3a87;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    transform: skew(0deg, 7deg);
+    margin-bottom: -150px;
+}
+
+.fake {
+    background-color: #0096e8;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    transform: skew(0deg, -5deg);
+    margin-bottom: -150px;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+}
+
+polygon {
+    padding: 0;
+    margin: 0;
 }

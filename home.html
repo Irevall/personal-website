@@ -4,19 +4,70 @@
     <meta charset="UTF-8">
     <title>Homepage of Irevall</title>
     <link rel="stylesheet" type="text/css"  href="style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Sunflower:300,500" rel="stylesheet">-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            polygonResize();
+        });
+        window.addEventListener('resize', () => {
+            polygonResize()
+        });
+
+        function polygonResize() {
+            let width =  window.innerWidth || document.body.clientWidth;
+            let polygons = document.querySelectorAll('polygon');
+            polygons[0].points[1].x = width;
+            polygons[0].points[2].x = width;
+            polygons[1].points[2].x = width;
+        }
+    </script>
     <script src=""></script>
 </head>
 <body>
 <nav>
-    <ul class="menu">
-        <!--<li><a href="./home.html">Home</a></li>-->
-        <li class="active">Home</li>
-        <li>About me</li>
-        <li>Projects</li>
-        <li>Resume</li>
-        <li id="options"><img src="en-flag.png"/></li>
-    </ul>
+    <div class="sections">
+        <div class="active"><p>Home</p></div>
+        <div><p>About me</p></div>
+        <div><p>Projects</p></div>
+        <div><p>Resume</p></div>
+    </div>
+    <div class="options">
+        <img src="en-flag.png"/>
+        <div class="sub-menu">
+            <img src="pl-flag.png"/>
+        </div>
+    </div>
 </nav>
+<main>
+    <div class="photo">
+        <img src="placeholder.jpg" alt="Placeholder photo"/>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h1>Kuba Marek</h1>
+            <h2>Irevall</h2>
+        </div>
+            <h2>Welcome to my portfolio. <br/>
+            I'm an amateur web developer looking for an internship or any kind of junior position and trying my luck with freelancing in the meanwhile.
+            </h2>
+            <h2>
+            Contact: <span class="mail">kjm@irevall.me</span>
+            </h2>
+    </div>
+</main>
+<!--<div class="fake">-->
+
+<!--</div>-->
+<!--<footer>-->
+
+<!--</footer>-->
+<div class="footer">
+    <svg height="200" width="100%">
+        <polygon points="0,200 1920,0 1920,200" style="fill:#0096e8"/>
+    </svg>
+    <svg height="200" width="100%">
+        <polygon points="0,0 0,200 1920,200" style="fill:#0a3a87"/>
+    </svg>
+</div>
 </body>
 </html>
