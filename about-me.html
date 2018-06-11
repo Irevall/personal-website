@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>About me</title>
+    <!-- <base href="http://example.com/page.html"/> -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style-about-me.css"/>
+    <script src="footer_resize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let date = new Date();
+            document.querySelector('.age').innerHTML = (date.getFullYear() - 1997);
+
+            document.querySelector('.picture-buttons').querySelectorAll('svg').forEach((el, index) => {
+                el.addEventListener('click', () => {
+                    document.querySelector('.picture-buttons').querySelectorAll('svg').forEach((el) => {
+                        el.querySelector('circle').classList.remove('button-selected');
+                    });
+                    document.querySelector('.picture-desc').innerHTML = el.querySelector('title').innerHTML;
+                    el.querySelector('circle').classList.add('button-selected');
+                    document.querySelector('.personal-photo').src = ('about-photo-' + (index + 1) + '.png');
+                });
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+<nav>
+    <div class="sections">
+        <a href="./home.html"><p>Home</p></a>
+        <a href="./about-me.html" class="active"><p>About me</p></a>
+        <a href="./projects.html"><p>Projects</p></a>
+        <a href="./resume.html"><p>Resume</p></a>
+    </div>
+    <div class="options">
+        <img src="en-flag.png"/>
+        <div class="sub-menu">
+            <img src="pl-flag.png"/>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="short-info">
+        <img class="personal-photo" src="about-photo-1.png"/>
+        <div class="picture-buttons">
+            <svg height="14" width="14">
+                <title>"Professional" photo</title>
+                <circle class="button-selected" cx="7" cy="7" r="5" stroke="#c9cacc" stroke-width="1" fill="#4b515b"/>
+            </svg>
+            <svg height="14" width="14">
+                <title>"Smart-casual" photo</title>
+                <circle cx="7" cy="7" r="5" stroke="#c9cacc" stroke-width="1" fill="#4b515b"/>
+            </svg>
+            <svg height="14" width="14">
+                <title>Full casual photo :></title>
+                <circle cx="7" cy="7" r="5" stroke="#c9cacc" stroke-width="1" fill="#4b515b"/>
+            </svg>
+        </div>
+        <p class="picture-desc">"Professional" photo</p>
+        <p>Name: Kuba</p>
+        <p>Age: <span class="age"></span> years</p>
+        <p>From: Wroclaw <img class="small-flag" src="pl-flag.png"/></p>
+        <p>Love me some JavaScript. ;)</p>
+    </div>
+    <div class="text">
+        <article>
+            I've started my journey with web dev in high school (technical college) which I graduated in 2017. It wasn't until a couple months ago before I started getting more into it and... here we are.
+            <br/>
+            I've started Computer Science course at University of Wroclaw in 2017 but had to resign due to personal reasons. I'm planning on recruiting again this year, but I am prepared for switching to non full-time.
+        </article>
+        <article>
+            I'm still pretty much a beginner. I'm by far most experienced with JavaScript, know enough HTML and CSS to build basic websites like this and a little bit of Node so I could've gotten this running. I think I am quick learner though and won't have any trouble learning other frameworks if needed.
+        </article>
+        <article>
+            My other hobbies include games and movies. I especially love multiplayer games because competition gives me motivation to keep me going. I have reached at least top 3% of player base in 3 different online games.
+        </article>
+    </div>
+</main>
+<div class="footer">
+    <svg height="200px" width="100%">
+        <polygon points="0,200 1,0 1,200" style="fill:#0096e8" />
+    </svg>
+    <svg height="200px" width="100%">
+        <polygon points="0,0 0,200 1,200" style="fill:#0a3a87" />
+    </svg>
+</div>
+</body>
+</html>

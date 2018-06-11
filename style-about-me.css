@@ -1,0 +1,60 @@
+.short-info {
+    display: inline-block;
+}
+
+.short-info > p {
+    font-size: 1.2em;
+    margin: 7px 0;
+}
+
+.button-selected {
+    fill: black;
+}
+
+.picture-buttons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picture-desc {
+    text-align: center;
+}
+
+.personal-photo{
+    width: 250px;
+}
+
+.personal-photo {
+    border-radius: 2px;
+    border: 2px #0096e8 solid;
+}
+
+.small-flag {
+    width: 1.2em;
+}
+
+main {
+    display: flex;
+}
+
+.short-info {
+    margin-left: auto;
+}
+
+.text {
+    margin-left: 45px;
+    margin-right: auto;
+}
+
+.text {
+    width: 40%;
+
+}
+
+.text > article {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
