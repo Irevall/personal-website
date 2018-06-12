@@ -1,0 +1,23 @@
+main {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blue;
+}
+
+main > article {
+    width: 100%;
+    background-color: red;
+}
+
+.title a {
+    display: inline;
+}
+
+article > img {
+    width: 600px;
+}
+
+h1, h2 {
+
+}

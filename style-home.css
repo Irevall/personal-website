@@ -3,18 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Baumans');
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 
+
 main {
     font-family: 'Dosis', sans-serif;
     font-size: 1.3em;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 1fr;
-    width: 100%;
-}
+    display: inline-block;
+    margin-left: calc((100% - 500px) / 2);
 
-.content {
-    disply: flex;
-    flex-direction: row;
 }
 
 .text {
@@ -22,9 +17,9 @@ main {
 }
 
 .photo {
-    float: left;
-    display: inline-block;
+    position: absolute;
     margin-top: 15px;
+    margin-left: -200px;
 }
 
 .photo > img {
