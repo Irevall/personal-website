@@ -5,15 +5,29 @@
     <title>Projects</title>
     <link rel="stylesheet" type="text/css"  href="style.css"/>
     <link rel="stylesheet" type="text/css"  href="style-projects.css"/>
-    <script src="footer_resize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.title').querySelectorAll('li').forEach((element, index) => {
+                element.addEventListener('click', () => {
+                    document.querySelector('main').querySelectorAll('article')[index].scrollIntoView({block: "start", behavior: "smooth"});
+                });
+            });
+
+            document.querySelector('.list-opener').addEventListener('click', () => {
+                document.querySelector('.title').querySelector('.list-hidden').classList.add('list-visible');
+                document.querySelector('.title').querySelector('.list-hidden').classList.remove('list-hidden');
+            });
+        });
+    </script>
+    <script src="footer_resize-smaller.js"></script>
 </head>
 <body>
 <nav>
     <div class="sections">
-        <a href="home.html"><p>Home</p></a>
-        <a href="about-me.html"><p>About me</p></a>
-        <a href="projects.html" class="active"><p>Projects</p></a>
-        <a href="resume.html"><p>Resume</p></a>
+        <a href="/"><p>Home</p></a>
+        <a href="about"><p>About me</p></a>
+        <a href="projects" class="active"><p>Projects</p></a>
+        <a href="resume"><p>Resume</p></a>
     </div>
     <div class="options">
         <img src="icons/en-flag.png"/>
@@ -24,12 +38,21 @@
 </nav>
 <main>
     <div class="title">
-        <h1>List of all projects I've done or I'm currently working on</h1>
+        <h1><span class="list-opener">List of all projects</span> I've done or I'm currently working on</h1>
+        <div class="list-hidden">
+            <ul>
+                <li>Snake game</li>
+                <li>Basic To Do List</li>
+                <li>Steam Avatars Gallery</li>
+                <li>Color Game</li>
+            </ul>
+        </div>
         <h2>Or just check my <a href="https://github.com/Irevall">GitHub</a></h2>
     </div>
+
     <article>
         <h1>Snake game</h1>
-        <img src="project-screens/snake-game.png"/>
+        <a href="https://irevall.github.io/snake-game/snake-game.html"><img src="project-screens/snake-game2.png"/></a>
         <div class="text">
             <p>Features:</p>
             <ul>
@@ -42,19 +65,63 @@
                 <li>Pauses</li>
                 <li>Dynamic canvas</li>
             </ul>
-            <p><a href="https://irevall.github.io/snake-game/snake-game.html">Live version<a/></p>
+            <p><a href="https://irevall.github.io/snake-game/snake-game.html">Live version</a></p>
             <p><a href="https://github.com/Irevall/snake-game">Project source</a></p>
+        </div>
+    </article>
+
+    <article id="to-do">
+        <h1>Basic To Do List</h1>
+        <a href="https://irevall.github.io/to-do-list/toDoList.html"><img src="project-screens/to-do-list.png"/></a>
+        <div class="text">
+            <p>Features:</p>
+            <ul>
+                <li>Edit and delete</li>
+                <li>Sort elements</li>
+                <li>Sort by dragging</li>
+                <li>Remember previous lists (local storage)</li>
+            </ul>
+            <p><a href="https://irevall.github.io/to-do-list/toDoList.html">Live version</a></p>
+            <p><a href="https://github.com/Irevall/to-do-list">Project source</a></p>
+        </div>
+    </article>
+
+    <article>
+        <h1>Steam Avatars Gallery</h1>
+        <a><img src="project-screens/steam-avatars.png"/></a>
+        <div class="text">
+            <p>Features:</p>
+            <ul>
+                <li>Grid</li>
+                <li>Not much else right now, just looks pretty</li>
+            </ul>
+            <p>Not live and not public (yet)</p>
+        </div>
+    </article>
+
+    <article>
+        <h1>Color Game</h1>
+        <a href="https://irevall.github.io/color-game/"><img src="project-screens/color-game.png"/></a>
+        <div class="text">
+            <p>Features:</p>
+            <ul>
+                <li>Different difficulties</li>
+                <li>Smooth transitions</li>
+            </ul>
+            <p><a href="https://irevall.github.io/color-game/">Live version</a></p>
+            <p><a href="https://github.com/Irevall/color-game">Project source</a></p>
+            <p>Disclaimer: project is not entirely mine, JS is, idea and CSS with help of a tutorial</p>
         </div>
     </article>
 </main>
 
-<div class="footer">
-    <svg height="200" width="100%">
+<footer>
+    <svg width="100%">
         <polygon points="0,200 1920,0 1920,200" style="fill:#0096e8"/>
     </svg>
-    <svg height="200" width="100%">
+    <svg width="100%">
         <polygon points="0,0 0,200 1920,200" style="fill:#0a3a87"/>
     </svg>
-</div>
+</footer>
 </body>
 </html>

@@ -9,9 +9,8 @@ body {
 }
 
 nav {
-    margin: 0;
+    margin: 0 0 65px 0;
     padding: 0;
-    margin-bottom: 100px;
     height: 60px;
     display: flex;
     background-color: #4b515b;
@@ -72,7 +71,7 @@ a {
     position: absolute;
     right: 0;
     margin-right: 15px;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .options:hover {
@@ -90,23 +89,18 @@ a {
     width: 40px;
 }
 
-main {
-    margin-bottom: 180px;
-    overflow: visible;
-}
-
-.footer {
+footer {
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
-.footer svg {
+footer svg {
     position: absolute;
     bottom: 0;
 }
 
-.footer polygon {
+footer polygon {
     padding: 0;
     margin: 0;
 }

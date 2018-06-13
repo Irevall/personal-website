@@ -2,22 +2,86 @@ main {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    background-color: blue;
 }
 
 main > article {
     width: 100%;
-    background-color: red;
+    border: 2px #0096e8 solid;
+    border-radius: 5px;
+    margin-bottom: 45px;
+}
+
+.title {
+    margin-bottom: 15px
 }
 
 .title a {
     display: inline;
 }
 
-article > img {
-    width: 600px;
+.title > h1, .title > h2 {
+    margin: 0;
 }
 
-h1, h2 {
+.list-hidden {
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
 
+.list-visible {
+    height: 100px;
+    opacity: 100;
+    visibility: visible;
+    transition: height 1s, opacity 1.3s;
+}
+
+.list-opener {
+    cursor: pointer;
+}
+
+.title ul {
+    display: inline-block;
+    cursor: pointer;
+}
+
+article h1{
+    font-size: 3.2em;
+    margin: 15px 0;
+    text-align: center;
+}
+
+article > a {
+    display: block;
+    width: 600px;
+    border: 2px #0a3a87 solid;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+article > .text {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+article img {
+    display: block;
+    width: 100%;
+}
+
+article p {
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+ul {
+    margin: 5px 0;
+}
+
+li {
+    font-size: 1.2em;
+}
+
+
+.list {
 }
