@@ -5,14 +5,7 @@
     <title>Projects</title>
     <link rel="stylesheet" type="text/css"  href="style.css"/>
     <link rel="stylesheet" type="text/css"  href="style-projects.css"/>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('.title').querySelectorAll('li').forEach((element, index) => {
-                element.addEventListener('click', () => {
-                    document.querySelector('main').querySelectorAll('article')[index].scrollIntoView({block: "start", behavior: "smooth"});
-                });
-            });
-    </script>
+    <script src="list_scroll.js"></script>
     <script src="footer_resize.js"></script>
 </head>
 <body>
