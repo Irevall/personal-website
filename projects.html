@@ -6,18 +6,18 @@
     <link rel="stylesheet" type="text/css"  href="style.css"/>
     <link rel="stylesheet" type="text/css"  href="style-projects.css"/>
     <script>
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     document.querySelector('.title').querySelectorAll('li').forEach((element, index) => {
-        //         element.addEventListener('click', () => {
-        //             document.querySelector('main').querySelectorAll('article')[index].scrollIntoView({block: "start", behavior: "smooth"});
-        //         });
-        //     });
-        //
-        //     document.querySelector('.list-opener').addEventListener('click', () => {
-        //         document.querySelector('.title').querySelector('.list-hidden').classList.add('list-visible');
-        //         document.querySelector('.title').querySelector('.list-hidden').classList.remove('list-hidden');
-        //     });
-        // });
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.title').querySelectorAll('li').forEach((element, index) => {
+                element.addEventListener('click', () => {
+                    document.querySelector('main').querySelectorAll('article')[index].scrollIntoView({block: "start", behavior: "smooth"});
+                });
+            });
+
+            document.querySelector('.list-opener').addEventListener('click', () => {
+                document.querySelector('.title').querySelector('.list-hidden').classList.add('list-visible');
+                document.querySelector('.title').querySelector('.list-hidden').classList.remove('list-hidden');
+            });
+        });
     </script>
     <script src="footer_resize.js"></script>
 </head>
@@ -88,7 +88,7 @@
 
     <article>
         <h1>Steam Avatars Gallery</h1>
-        <a><img src="project-screens/steam-avatars.png"/></a>
+        <a target="_blank" href="project-screens/steam-avatars.png"><img src="project-screens/steam-avatars.png"/></a>
         <div class="text">
             <p>Features:</p>
             <ul>
