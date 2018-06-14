@@ -25,7 +25,7 @@ main {
 .photo > img {
     height: 200px;
     border-radius: 50%;
-    border: 2px #0096e8 solid;
+    border: 3px #0096e8 solid;
 }
 
 .text {
