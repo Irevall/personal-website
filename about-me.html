@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>About me</title>
-    <!-- <base href="http://example.com/page.html"/> -->
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="stylesheet" type="text/css" href="style-about-me.css"/>
     <script src="footer_resize.js"></script>
@@ -29,16 +29,17 @@
 </head>
 <body>
 <nav>
-    <div class="sections">
-        <a href="/"><p>Home</p></a>
-        <a href="about" class="active"><p>About me</p></a>
-        <a href="projects"><p>Projects</p></a>
-        <a href="resume"><p>Resume</p></a>
-    </div>
+    <a href="/"><p>Home</p></a>
+    <a href="about" class="active"><p>About me</p></a>
+    <a href="projects"><p>Projects</p></a>
+    <a href="resume"><p>Resume</p></a>
+    <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
     <div class="options">
-        <img src="icons/en-flag.png"/>
-        <div class="sub-menu">
-            <img src="icons/pl-flag.png"/>
+        <div class="options-container">
+            <img src="icons/en-flag.png"/>
+            <div class="sub-menu">
+                <img src="icons/pl-flag.png"/>
+            </div>
         </div>
     </div>
 </nav>
@@ -46,24 +47,23 @@
     <div class="short-info">
         <img class="personal-photo" src="photos/about-photo-1.png"/>
         <div class="picture-buttons">
-            <svg height="14" width="14">
+            <svg height="16" width="16">
                 <title>"Professional" photo</title>
-                <circle class="button-selected" cx="7" cy="7" r="5" stroke="#c9cacc" stroke-width="1" fill="#4b515b"/>
+                <circle class="button-selected" cx="8" cy="8" r="6" stroke="#0096e8" stroke-width="1" fill="#1f2a3a"/>
             </svg>
-            <svg height="14" width="14">
+            <svg height="16" width="16">
                 <title>"Smart-casual" photo</title>
-                <circle cx="7" cy="7" r="5" stroke="#c9cacc" stroke-width="1" fill="#4b515b"/>
+                <circle cx="8" cy="8" r="6" stroke="#0096e8" stroke-width="1" fill="#1f2a3a"/>
             </svg>
-            <svg height="14" width="14">
+            <svg height="16" width="16">
                 <title>Full casual photo :></title>
-                <circle cx="7" cy="7" r="5" stroke="#c9cacc" stroke-width="1" fill="#4b515b"/>
+                <circle cx="8" cy="8" r="6" stroke="#0096e8" stroke-width="1" fill="#1f2a3a"/>
             </svg>
         </div>
         <p class="picture-desc">"Professional" photo</p>
         <p>Name: Kuba</p>
         <p>Age: <span class="age"></span> years</p>
         <p>From: Wroclaw <img class="small-flag" src="icons/pl-flag.png"/></p>
-        <p>JavaScript is sometimes pretty fun</p>
     </div>
     <div class="text">
         <article>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio homepage</title>
     <link rel="stylesheet" type="text/css"  href="style.css"/>
     <link rel="stylesheet" type="text/css"  href="style-home.css"/>
@@ -9,16 +10,17 @@
 </head>
 <body>
 <nav>
-    <div class="sections">
-        <a href="/" class="active"><p>Home</p></a>
-        <a href="about"><p>About me</p></a>
-        <a href="projects"><p>Projects</p></a>
-        <a href="resume"><p>Resume</p></a>
-    </div>
+    <a href="/" class="active"><p>Home</p></a>
+    <a href="about"><p>About me</p></a>
+    <a href="projects"><p>Projects</p></a>
+    <a href="resume"><p>Resume</p></a>
+    <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
     <div class="options">
+        <div class="options-container">
         <img src="icons/en-flag.png"/>
         <div class="sub-menu">
             <img src="icons/pl-flag.png"/>
+        </div>
         </div>
     </div>
 </nav>
@@ -35,7 +37,7 @@
                 I'm an amateur web developer, mostly experienced in JavaScript, looking for an internship or any kind of junior position so I can support myself through Computer Science course.
             </h2>
             <h2>
-                Contact: <span class="mail">kjm@irevall.me</span>
+                Contact: <a href="mailto:kjm@irevall.me" class="mail">kjm@irevall.me</a>
             </h2>
         </div>
 </main>

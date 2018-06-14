@@ -1,19 +1,53 @@
 main {
-    width: 700px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-main > article {
-    width: 100%;
+@media (min-width: 1380px) {
+    .projects {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 100px;
+        justify-content: center;
+    }
+
+    article {
+        width: 600px;
+    }
+
+    article > a {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .projects {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    article {
+        width: 730px;
+    }
+
+    article > a {
+        width: 630px;
+    }
+}
+
+.projects > article {
     border: 3px #0096e8 solid;
     border-radius: 7px;
     margin-bottom: 45px;
-    /*background: #1f2a3a;*/
 }
 
 .title {
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title a {
@@ -24,26 +58,17 @@ main > article {
     margin: 0;
 }
 
-.list-hidden {
-    height: 0px;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.list-visible {
-    height: 100px;
-    opacity: 100;
-    visibility: visible;
-    transition: height 1s, opacity 1.3s;
-}
-
-.list-opener {
-    cursor: pointer;
+.list {
+    height: 100%;
 }
 
 .title ul {
     display: inline-block;
     cursor: pointer;
+}
+
+main a {
+    text-decoration: underline;
 }
 
 article h1{
@@ -54,7 +79,6 @@ article h1{
 
 article > a {
     display: block;
-    width: 600px;
     border: 3px #0263e2 solid;
     border-radius: 4px;
     margin: 0 auto;

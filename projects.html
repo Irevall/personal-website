@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Projects</title>
     <link rel="stylesheet" type="text/css"  href="style.css"/>
     <link rel="stylesheet" type="text/css"  href="style-projects.css"/>
@@ -10,50 +11,42 @@
 </head>
 <body>
 <nav>
-    <div class="sections">
-        <a href="/"><p>Home</p></a>
-        <a href="about"><p>About me</p></a>
-        <a href="projects" class="active"><p>Projects</p></a>
-        <a href="resume"><p>Resume</p></a>
-    </div>
+    <a href="/"><p>Home</p></a>
+    <a href="about"><p>About me</p></a>
+    <a href="projects" class="active"><p>Projects</p></a>
+    <a href="resume"><p>Resume</p></a>
+    <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
     <div class="options">
-        <img src="icons/en-flag.png"/>
-        <div class="sub-menu">
-            <img src="icons/pl-flag.png"/>
+        <div class="options-container">
+            <img src="icons/en-flag.png"/>
+            <div class="sub-menu">
+                <img src="icons/pl-flag.png"/>
+            </div>
         </div>
     </div>
 </nav>
 <main>
     <div class="title">
         <h1>List of all projects I've done or I'm currently working on:</h1>
-        <div class="list-visible">
+        <div class="list">
             <ul>
-                <li>Snake game</li>
+                <li>Portfolio</li>
                 <li>Basic To Do List</li>
-                <li>Steam Avatars Gallery</li>
+                <li>Snake game</li>
                 <li>Color Game</li>
+                <li>Steam Avatars Gallery</li>
             </ul>
         </div>
         <h2>Or just check my <a target="_blank" href="https://github.com/Irevall">GitHub</a></h2>
     </div>
 
+    <div class="projects">
     <article>
-        <h1>Snake game</h1>
-        <a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html"><img src="project-screens/snake-game2.png"/></a>
+        <h1>Portfolio</h1>
+        <a target="_blank" href="/"><img src="project-screens/portfolio.png"/></a>
         <div class="text">
-            <p>Features:</p>
-            <ul>
-                <li>Continuous, stable performance</li>
-                <li>All game options I could have thought about</li>
-                <ul>
-                    <li>tail eating</li>
-                    <li>walking through walls</li>
-                </ul>
-                <li>Pauses</li>
-                <li>Dynamic canvas</li>
-            </ul>
-            <p><a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html">Live version</a></p>
-            <p><a target="_blank" href="https://github.com/Irevall/snake-game">Project source</a></p>
+            <p>My first "real" website with domain and all that jazz.</p>
+            <p><a target="_blank" href="https://github.com/Irevall/portfolio.irevall.me">Project source</a></p>
         </div>
     </article>
 
@@ -73,6 +66,39 @@
         </div>
     </article>
 
+        <article>
+            <h1>Snake game</h1>
+            <a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html"><img src="project-screens/snake-game2.png"/></a>
+            <div class="text">
+                <p>Features:</p>
+                <ul>
+                    <li>Continuous, stable performance</li>
+                    <li>All game options I could have thought about</li>
+                    <ul>
+                        <li>tail eating</li>
+                        <li>walking through walls</li>
+                    </ul>
+                    <li>Pauses</li>
+                    <li>Dynamic canvas size</li>
+                </ul>
+                <p><a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html">Live version</a></p>
+                <p><a target="_blank" href="https://github.com/Irevall/snake-game">Project source</a></p>
+            </div>
+        </article>
+        <article>
+            <h1>Color Game</h1>
+            <a target="_blank" href="https://irevall.github.io/color-game/"><img src="project-screens/color-game.png"/></a>
+            <div class="text">
+                <p>Features:</p>
+                <ul>
+                    <li>Different difficulties</li>
+                    <li>Smooth transitions</li>
+                </ul>
+                <p><a target="_blank" href="https://irevall.github.io/color-game/">Live version</a></p>
+                <p><a target="_blank" href="https://github.com/Irevall/color-game">Project source</a></p>
+                <p>Disclaimer: project is not entirely mine, JS is, idea and CSS with help of a tutorial</p>
+            </div>
+        </article>
     <article>
         <h1>Steam Avatars Gallery</h1>
         <a target="_blank" href="project-screens/steam-avatars.png"><img src="project-screens/steam-avatars.png"/></a>
@@ -86,20 +112,8 @@
         </div>
     </article>
 
-    <article>
-        <h1>Color Game</h1>
-        <a target="_blank" href="https://irevall.github.io/color-game/"><img src="project-screens/color-game.png"/></a>
-        <div class="text">
-            <p>Features:</p>
-            <ul>
-                <li>Different difficulties</li>
-                <li>Smooth transitions</li>
-            </ul>
-            <p><a target="_blank" href="https://irevall.github.io/color-game/">Live version</a></p>
-            <p><a target="_blank" href="https://github.com/Irevall/color-game">Project source</a></p>
-            <p>Disclaimer: project is not entirely mine, JS is, idea and CSS with help of a tutorial</p>
-        </div>
-    </article>
+
+    </div>
 </main>
 
 <footer>

@@ -12,29 +12,19 @@ body {
 nav {
     margin: 0 0 65px 0;
     padding: 0;
-    height: 60px;
+    height: 55px;
+    width: 100%;
     display: flex;
     background-color: #1f2a3a;
-    /*background-color: #4b515b;*/
+    font-size: 30px;
+    color: #c9cacc;
     box-shadow: 0 1px 1px 0 black;
 }
 
-a {
+
+nav > a {
     display: block;
     text-decoration: none;
-    color: #dee1e5;
-}
-
-.sections {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    font-size: 30px;
-    color: #c9cacc;
-}
-
-.sections > a {
     padding-bottom: 5px;
     margin-left: 50px;
     height: 100%;
@@ -42,18 +32,34 @@ a {
     box-sizing: border-box;
 }
 
-.sections > a > p {
+a {
+    text-decoration: none;
+    color: #dee1e5;
+}
+
+a:hover {
+    color: #0096e8;
+}
+
+.github {
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.github > img {
+    margin-top: 7px;
+    width: 35px;
+}
+
+nav > a > p {
     margin-top: 10px;
     margin-bottom: 0;
     height: 100%;
 
 }
 
-.sections > a:not(.active):hover {
-    color: #0096e8;
-}
-
-.sections > .active {
+nav > .active {
     color: #0096e8;
     border-bottom: #0096e8 5px solid;
     padding-bottom: 0;
@@ -68,20 +74,18 @@ a {
 }
 
 .options {
-    background-color: #1f2a3a;
-    padding: 7px;
-    position: absolute;
-    right: 0;
-    margin-right: 15px;
+    width: 70px;
     margin-top: 5px;
 }
 
-.options:hover {
-    box-shadow: 1px 1px 1px 1px black;
+.options-container {
+    position: absolute;
+    background-color: #1f2a3a;
+    padding: 5px;
 }
 
-.options:hover > .sub-menu{
-    display: flex;
+.options-container:hover {
+    box-shadow: 1px 1px 1px 1px black;
 }
 
 .sub-menu {
@@ -89,6 +93,10 @@ a {
     padding: 0;
     display: none;
     width: 40px;
+}
+
+.options-container:hover .sub-menu{
+    display: flex;
 }
 
 footer {
