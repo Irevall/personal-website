@@ -6,15 +6,17 @@
     <title>Projects</title>
     <link rel="stylesheet" type="text/css"  href="style.css"/>
     <link rel="stylesheet" type="text/css"  href="style-projects.css"/>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script src="list_scroll.js"></script>
     <script src="footer_resize.js"></script>
 </head>
 <body>
 <nav>
-    <a href="/"><p>Home</p></a>
-    <a href="about"><p>About me</p></a>
-    <a href="projects" class="active"><p>Projects</p></a>
-    <a href="resume"><p>Resume</p></a>
+    <a href="/"><p>{{ $t("nav.home") }}</p></a>
+    <a href="about" ><p>{{ $t("nav.about") }}</p></a>
+    <a href="projects" class="active"><p>{{ $t("nav.projects") }}</p></a>
+    <a href="resume"><p>{{ $t("nav.resume") }}</p></a>
     <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
     <div class="options">
         <div class="options-container">
@@ -27,88 +29,79 @@
 </nav>
 <main>
     <div class="title">
-        <h1>List of all projects I've done or I'm currently working on:</h1>
+        <h1>{{ $t("list.desc") }}:</h1>
         <div class="list">
             <ul>
-                <li>Portfolio</li>
-                <li>Basic To Do List</li>
-                <li>Snake game</li>
-                <li>Color Game</li>
-                <li>Steam Avatars Gallery</li>
+                <li><a target="_blank" href="https://github.com/Irevall/portfolio.irevall.me">{{ $t("list.project0") }}</a></li>
+                <li>{{ $t("list.project1") }}</li>
+                <li>{{ $t("list.project2") }}</li>
+                <li>{{ $t("list.project3") }}</li>
+                <li>{{ $t("list.project4") }}</li>
             </ul>
         </div>
-        <h2>Or just check my <a target="_blank" href="https://github.com/Irevall">GitHub</a></h2>
+        <h2>{{ $t("list.github") }} <a target="_blank" href="https://github.com/Irevall">GitHub</a></h2>
     </div>
 
     <div class="projects">
-    <article>
-        <h1>Portfolio</h1>
-        <a target="_blank" href="/"><img src="project-screens/portfolio.png"/></a>
-        <div class="text">
-            <p>My first "real" website with domain and all that jazz.</p>
-            <p><a target="_blank" href="https://github.com/Irevall/portfolio.irevall.me">Project source</a></p>
-        </div>
-    </article>
-
-    <article id="to-do">
-        <h1>Basic To Do List</h1>
-        <a target="_blank" href="https://irevall.github.io/to-do-list/toDoList.html"><img src="project-screens/to-do-list.png"/></a>
-        <div class="text">
-            <p>Features:</p>
-            <ul>
-                <li>Edit and delete</li>
-                <li>Sort elements</li>
-                <li>Sort by dragging</li>
-                <li>Remember previous lists (local storage)</li>
-            </ul>
-            <p><a target="_blank" href="https://irevall.github.io/to-do-list/toDoList.html">Live version</a></p>
-            <p><a target="_blank" href="https://github.com/Irevall/to-do-list">Project source</a></p>
-        </div>
-    </article>
-
         <article>
-            <h1>Snake game</h1>
+            <h1>{{ $t("list.project1") }}</h1>
             <a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html"><img src="project-screens/snake-game2.png"/></a>
             <div class="text">
-                <p>Features:</p>
+                <p>{{ $t("projects_desc.features") }}</p>
                 <ul>
-                    <li>Continuous, stable performance</li>
-                    <li>All game options I could have thought about</li>
+                    <li>{{ $t("projects_desc.snake_feature1") }}</li>
+                    <li>{{ $t("projects_desc.snake_feature2") }}</li>
                     <ul>
-                        <li>tail eating</li>
-                        <li>walking through walls</li>
+                        <li>{{ $t("projects_desc.snake_feature21") }}</li>
+                        <li>{{ $t("projects_desc.snake_feature22") }}</li>
                     </ul>
-                    <li>Pauses</li>
-                    <li>Dynamic canvas size</li>
+                    <li>{{ $t("projects_desc.snake_feature3") }}</li>
+                    <li>{{ $t("projects_desc.snake_feature4") }}</li>
                 </ul>
-                <p><a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html">Live version</a></p>
-                <p><a target="_blank" href="https://github.com/Irevall/snake-game">Project source</a></p>
+                <p><a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html">{{ $t("projects_desc.live") }}</a></p>
+                <p><a target="_blank" href="https://github.com/Irevall/snake-game">{{ $t("projects_desc.source") }}</a></p>
             </div>
         </article>
         <article>
-            <h1>Color Game</h1>
+            <h1>{{ $t("list.project2") }}</h1>
             <a target="_blank" href="https://irevall.github.io/color-game/"><img src="project-screens/color-game.png"/></a>
             <div class="text">
-                <p>Features:</p>
+                <p>{{ $t("projects_desc.features") }}</p>
                 <ul>
-                    <li>Different difficulties</li>
-                    <li>Smooth transitions</li>
+                    <li>{{ $t("projects_desc.color_feature1") }}</li>
+                    <li>{{ $t("projects_desc.color_feature2") }}</li>
                 </ul>
-                <p><a target="_blank" href="https://irevall.github.io/color-game/">Live version</a></p>
-                <p><a target="_blank" href="https://github.com/Irevall/color-game">Project source</a></p>
-                <p>Disclaimer: project is not entirely mine, JS is, idea and CSS with help of a tutorial</p>
+                <p><a target="_blank" href="https://irevall.github.io/color-game/">{{ $t("projects_desc.live") }}</a></p>
+                <p><a target="_blank" href="https://github.com/Irevall/color-game">{{ $t("projects_desc.source") }}</a></p>
+                <p>{{ $t("projects_desc.color_misc") }}</p>
             </div>
         </article>
+    <article id="to-do">
+        <h1>{{ $t("list.project3") }}</h1>
+        <a target="_blank" href="https://irevall.github.io/to-do-list/toDoList.html"><img src="project-screens/to-do-list.png"/></a>
+        <div class="text">
+            <p>{{ $t("projects_desc.features") }}</p>
+            <ul>
+                <li>{{ $t("projects_desc.todo_feature1") }}</li>
+                <li>{{ $t("projects_desc.todo_feature2") }}</li>
+                <li>{{ $t("projects_desc.todo_feature3") }}</li>
+                <li>{{ $t("projects_desc.todo_feature4") }}</li>
+            </ul>
+            <p><a target="_blank" href="https://irevall.github.io/to-do-list/toDoList.html">{{ $t("projects_desc.live") }}</a></p>
+            <p><a target="_blank" href="https://github.com/Irevall/to-do-list">{{ $t("projects_desc.source") }}</a></p>
+        </div>
+    </article>
+
     <article>
-        <h1>Steam Avatars Gallery</h1>
+        <h1>{{ $t("list.project4") }}</h1>
         <a target="_blank" href="project-screens/steam-avatars.png"><img src="project-screens/steam-avatars.png"/></a>
         <div class="text">
-            <p>Features:</p>
+            <p>{{ $t("projects_desc.features") }}</p>
             <ul>
-                <li>Grid</li>
-                <li>Not much else right now, just looks pretty</li>
+                <li>{{ $t("projects_desc.avatars_feature1") }}</li>
+                <li>{{ $t("projects_desc.avatars_feature2") }}</li>
             </ul>
-            <p>Not live and not public (yet)</p>
+            <p>{{ $t("projects_desc.avatars_misc") }}</p>
         </div>
     </article>
 
@@ -124,5 +117,74 @@
         <polygon points="0,0 0,150 1920,150" style="fill:#0263e2"/>
     </svg>
 </footer>
+<script src="languages-and-flag.js">
+</script>
+<script>
+    messages.en.list = {
+        desc: 'List of all projects I\'ve done or I\'m currently working on',
+        project0: 'Portfolio (this one)',
+        project1: 'Snake game',
+        project2: 'Color Game',
+        project3: 'Basic To Do List',
+        project4: 'Steam Avatars Gallery',
+        github: 'Or just check my',
+    };
+
+    messages.pl.list = {
+        desc: 'Lista wszystkich projektów nad którymi pracuje lub pracowałem',
+        project0: 'Portfolio (aktualna strona)',
+        project1: 'Gra w węża',
+        project2: 'Gra w kolory',
+        project3: 'Prosta lista rzeczy do zrobienia',
+        project4: 'Galeria Avatarów Steam',
+        github: 'Albo sprawdź mój',
+    };
+
+    messages.en.projects_desc = {
+        features: 'Features',
+        live: 'Live version',
+        source: 'Project source',
+        snake_feature1: 'Continuous, stable performance',
+        snake_feature2: 'All game options I could have thought about',
+        snake_feature21: 'tail eating',
+        snake_feature22: 'walking through walls',
+        snake_feature3: 'Pauses',
+        snake_feature4: 'Dynamic canvas size',
+        color_feature1: 'Different difficulties',
+        color_feature2: 'Smooth transitions',
+        color_misc: 'Disclaimer: project is not entirely mine, JS is, idea and CSS with help of a tutorial',
+        todo_feature1: 'Edit and delete',
+        todo_feature2: 'Sort elements',
+        todo_feature3: 'Sort by dragging',
+        todo_feature4: 'Remember previous lists (local storage)',
+        avatars_feature1: 'Grid',
+        avatars_feature2: 'Not much else right now, just looks pretty',
+        avatars_misc: 'Not live and not public (yet)',
+    };
+
+    messages.pl.projects_desc = {
+        features: 'Funkcje',
+        live: 'Wersja na żywo',
+        source: 'Źródło',
+        snake_feature1: 'Płynna i stabilna animacja',
+        snake_feature2: 'Wszystkie opcje jakie potrafiłem wymyślećAll game options I could have thought about',
+        snake_feature21: 'zjadanie ogona',
+        snake_feature22: 'przechodzneie pzez ściany',
+        snake_feature3: 'Pauzy',
+        snake_feature4: 'Dynamiczny rozmiar canvas',
+        color_feature1: 'Różne poziomy trudności',
+        color_feature2: 'Płynna animacja',
+        color_misc: 'Projekt nie jest w całości mojego autorstwa, JavaScript jest, pomysł i struktura są z tutoriala',
+        todo_feature1: 'Edycja i usuwanie',
+        todo_feature2: 'Sortowanie',
+        todo_feature3: 'Sortowanie przez przeciąganie',
+        todo_feature4: 'Zapamiętywanie list (local storage)',
+        avatars_feature1: 'Grid',
+        avatars_feature2: 'Niewiele więcej, po prostu ładnie wygląda',
+        avatars_misc: 'Jak na razie niepubliczna',
+    };
+    new Vue({i18n}).$mount('.title');
+    new Vue({i18n}).$mount('.projects');
+</script>
 </body>
 </html>

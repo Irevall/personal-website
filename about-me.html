@@ -6,6 +6,8 @@
     <title>About me</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="stylesheet" type="text/css" href="style-about-me.css"/>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script src="footer_resize.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -17,7 +19,6 @@
                     document.querySelector('.picture-buttons').querySelectorAll('svg').forEach((el) => {
                         el.querySelector('circle').classList.remove('button-selected');
                     });
-                    document.querySelector('.picture-desc').innerHTML = el.querySelector('title').innerHTML;
                     el.querySelector('circle').classList.add('button-selected');
                     document.querySelector('.personal-photo').src = ('photos/about-photo-' + (index + 1) + '.png');
                 });
@@ -29,10 +30,10 @@
 </head>
 <body>
 <nav>
-    <a href="/"><p>Home</p></a>
-    <a href="about" class="active"><p>About me</p></a>
-    <a href="projects"><p>Projects</p></a>
-    <a href="resume"><p>Resume</p></a>
+    <a href="/"><p>{{ $t("nav.home") }}</p></a>
+    <a href="about" class="active"><p>{{ $t("nav.about") }}</p></a>
+    <a href="projects"><p>{{ $t("nav.projects") }}</p></a>
+    <a href="resume"><p>{{ $t("nav.resume") }}</p></a>
     <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
     <div class="options">
         <div class="options-container">
@@ -48,38 +49,33 @@
         <img class="personal-photo" src="photos/about-photo-1.png"/>
         <div class="picture-buttons">
             <svg height="16" width="16">
-                <title>"Professional" photo</title>
                 <circle class="button-selected" cx="8" cy="8" r="6" stroke="#0096e8" stroke-width="1" fill="#1f2a3a"/>
             </svg>
             <svg height="16" width="16">
-                <title>"Smart-casual" photo</title>
                 <circle cx="8" cy="8" r="6" stroke="#0096e8" stroke-width="1" fill="#1f2a3a"/>
             </svg>
             <svg height="16" width="16">
-                <title>Full casual photo :></title>
                 <circle cx="8" cy="8" r="6" stroke="#0096e8" stroke-width="1" fill="#1f2a3a"/>
             </svg>
         </div>
-        <p class="picture-desc">"Professional" photo</p>
-        <p>Name: Kuba</p>
-        <p>Age: <span class="age"></span> years</p>
-        <p>From: Wroclaw <img class="small-flag" src="icons/pl-flag.png"/></p>
+        <p>{{ $t("desc.name") }}: Kuba</p>
+        <p>{{ $t("desc.age") }}: <span class="age"></span> {{ $t("desc.years") }}</p>
+        <p>{{ $t("desc.from") }}: Wrocław <img class="small-flag" src="icons/pl-flag.png"/></p>
     </div>
     <div class="text">
         <article>
-            <h1>Education</h1>
-            I've enjoyed writing scripts since couple years ago, when I started writing basic 'hacks' for online browser games. For what it's worth I've also finished Technical College in 2017 which also granted me "Certificate of competence, an IT technician". It wasn't until a couple months ago before I started getting more into it and... here we are.
+            <h1>{{ $t("text.education_title") }}</h1>
+            {{ $t("text.education_text") }}
+            <br/><br/>
+            {{ $t("text.education_text2") }}
         </article>
         <article>
-            I've started Computer Science course at University of Wroclaw in 2017 but had to resign due to personal reasons. I'm planning on recruiting again this year, but I am prepared for switching to non full-time.
+            <h1>{{ $t("text.skills_title") }}</h1>
+            {{ $t("text.skills_text") }}
         </article>
         <article>
-            <h1>Skills</h1>
-            I'm still pretty much a beginner. I'm by far most experienced with JavaScript, decent with simple website structure and styling and know basics of Nginx and MySQL. But I think I am quick learner and won't have much trouble learning other frameworks or backend if needed.
-        </article>
-        <article>
-            <h1>Other</h1>
-            My other hobbies include gaming and watching movies. I especially love competing in multiplayer games for meaningless prizes. :)
+            <h1>{{ $t("text.other_title") }}</h1>
+            {{ $t("text.other_text") }}
         </article>
     </div>
 </main>
@@ -92,5 +88,45 @@
         <polygon points="0,0 0,150 1920,150" style="fill:#0263e2"/>
     </svg>
 </footer>
+<script src="languages-and-flag.js">
+</script>
+<script>
+    messages.en.desc = {
+        name: 'Name',
+        age: 'Age',
+        years: 'years',
+        from: 'From',
+    };
+
+    messages.pl.desc = {
+        name: 'Imię',
+        age: 'Wiek',
+        years: 'lat',
+        from: 'Skąd',
+    };
+
+    messages.en.text = {
+        education_title: 'Education',
+        education_text: 'I\'ve enjoyed writing scripts since couple years ago, when I started writing basic \'hacks\' for online browser games. For what it\'s worth I\'ve also finished Technical College in 2017 which also granted me "Certificate of competence, an IT technician". It wasn\'t until a couple months ago before I started getting more into it and... here we are.',
+        education_text2: 'I\'ve started Computer Science course at University of Wroclaw in 2017 but had to resign due to personal reasons. I\'m planning on recruiting again this year, but I am prepared for switching to non full-time.',
+        skills_title: 'Skills',
+        skills_text: 'I\'m still pretty much a beginner. I\'m by far most experienced with JavaScript, decent with simple website structure and styling and know basics of Nginx and MySQL. But I think I am quick learner and won\'t have much trouble learning other frameworks or backend if needed.',
+        other_title: 'Other',
+        other_text: 'My other hobbies include gaming and watching movies. I especially love competing in multiplayer games for meaningless prizes. :)',
+    };
+
+    messages.pl.text = {
+        education_title: 'Edukacja',
+        education_text: 'Pierwsze proste skrypty zacząłem pisać już dość dawno temu, kiedy to pisałem \'ułatwienia\' do przeglądarkowych gier online. W 2017 ukończyłem Technikum z tytułem Technika Informatyka. Mimo, że egzamin techniczny obejmował również tworzenie stron, to zacząłem się tym interesować dopiero parę miesięcy temu.',
+        education_text2: 'W zeszłym roku zostałem studentem Uniwersytetu Wrocławskiego (kierunek Informatyka), ale musiałem zrezygnować z powodów osobistych. Planuję wrócić na studia w tym roku, ale jestem przygotowany by przejść na niepełny etat i kontynuować pracę.',
+        skills_title: 'Umięjętności',
+        skills_text: 'Dalej jestem początkującym. Najwięcej doświadczenia mam z JavaScriptem, umiem tworzyć proste struktury stron i je stylować, znam również podstawy Nginx, Vue i MySQL. Uważam jednak, że szybko się uczę i nie będę miał problemu z nauczeniem się innych frameworków, bądź jeśli potrzeba backendu (w tej chwili zaczynam się uczyć Node).',
+        other_title: 'Inne',
+        other_text: 'Moje pozostałe hobby to przedewszystkim gry komputerowe i film. Szczególnie uwielbiam uczestniczyć w turniejach w grach multiplayer, o \'bezcenne\' nagrody. :)',
+    };
+
+    new Vue({i18n}).$mount('.text');
+    new Vue({i18n}).$mount('.short-info');
+</script>
 </body>
 </html>

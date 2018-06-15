@@ -4,42 +4,41 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio homepage</title>
-    <link rel="stylesheet" type="text/css"  href="style.css"/>
-    <link rel="stylesheet" type="text/css"  href="style-home.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style-home.css"/>
+    <link rel="icon" href="icons/page-icon.png"/>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <script src="footer_resize.js"></script>
 </head>
 <body>
 <nav>
-    <a href="/" class="active"><p>Home</p></a>
-    <a href="about"><p>About me</p></a>
-    <a href="projects"><p>Projects</p></a>
-    <a href="resume"><p>Resume</p></a>
+    <a href="/" class="active"><p>{{ $t("nav.home") }}</p></a>
+    <a href="about"><p>{{ $t("nav.about") }}</p></a>
+    <a href="projects"><p>{{ $t("nav.projects") }}</p></a>
+    <a href="resume"><p>{{ $t("nav.resume") }}</p></a>
     <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
-    <div class="options">
-        <div class="options-container">
+    <div class="flags">
         <img src="icons/en-flag.png"/>
-        <div class="sub-menu">
-            <img src="icons/pl-flag.png"/>
-        </div>
-        </div>
+        <img src="icons/pl-flag.png"/>
     </div>
 </nav>
 <main>
-        <div class="photo">
-            <img src="photos/placeholder.jpg" alt="Placeholder photo"/>
+    <div class="photo">
+        <img src="photos/placeholder.jpg" alt="Placeholder photo"/>
+    </div>
+    <div class="text">
+        <div class="title">
+            <h1>Kuba Marek</h1>
+            <h2>Irevall</h2>
         </div>
-        <div class="text">
-            <div class="title">
-                <h1>Kuba Marek</h1>
-                <h2>Irevall</h2>
-            </div>
-            <h2>Welcome to my portfolio. <br/>
-                I'm an amateur web developer, mostly experienced in JavaScript, looking for an internship or any kind of junior position so I can support myself through Computer Science course.
-            </h2>
-            <h2>
-                Contact: <a href="mailto:kjm@irevall.me" class="mail">kjm@irevall.me</a>
-            </h2>
-        </div>
+        <h2>{{ $t("text.welcome") }}<br/>
+            {{ $t("text.rest") }}
+        </h2>
+        <h2>
+            {{ $t("text.contact") }}: <a href="mailto:kjm@irevall.me" class="mail">kjm@irevall.me</a>
+        </h2>
+    </div>
 </main>
 
 <footer>
@@ -50,5 +49,23 @@
         <polygon points="0,0 0,150 1920,150" style="fill:#0263e2"/>
     </svg>
 </footer>
+
+<script src="languages-and-flag.js">
+</script>
+<script>
+    messages.en.text = {
+        welcome: 'Welcome to my portfolio.',
+        rest: 'I\'m an amateur web developer, mostly experienced in JavaScript, looking for an internship or any kind of junior position so I can support myself through Computer Science course.',
+        contact: 'Contact',
+    };
+
+    messages.pl.text = {
+        welcome: 'Witaj na moim portfolio.',
+        rest: 'Jestem początkującym web developerem, piszącym głównie w JavaScript. Poszukuje stażu bądź ofert junior developera, które umożliwią mi pracę podczas studiów',
+        contact: 'Kontakt',
+    };
+
+    new Vue({i18n}).$mount('.text');
+</script>
 </body>
 </html>

@@ -4,6 +4,10 @@ main {
     margin-right: auto;
 }
 
+main a {
+    text-decoration: underline;
+}
+
 @media (min-width: 1380px) {
     .projects {
         display: grid;
@@ -61,14 +65,17 @@ main {
 .list {
     height: 100%;
 }
+.list a {
+    text-decoration: none;
+}
 
 .title ul {
     display: inline-block;
     cursor: pointer;
 }
 
-main a {
-    text-decoration: underline;
+.title li:hover {
+    color: #0096e8;
 }
 
 article h1{
@@ -105,8 +112,4 @@ ul {
 
 li {
     font-size: 1.2em;
-}
-
-
-.list {
 }
