@@ -68,4 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             flags[1].classList.add('hidden');
         }
     }
+    // console.log(window.innerHeight);
+    // console.log(document.querySelector('main').clientHeight + document.querySelector('nav').clientHeight + document.querySelector('footer').clientHeight);
+    // console.log(document.body.clientHeight);
 });

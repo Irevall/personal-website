@@ -9,8 +9,8 @@ function polygonResize() {
     const width =  window.innerWidth || document.body.clientWidth;
     const svg = document.querySelector('footer').querySelectorAll('svg');
     const polygons = document.querySelector('footer').querySelectorAll('polygon');
-    const height = 40 + width / 30;
-    document.querySelector('main').style.marginBottom = height + 'px';
+    const height = 30 + width / 30;
+    document.querySelector('footer').style.height = height + 'px';
     svg[0].style.height = height + 'px';
     svg[1].style.height = height + 'px';
     polygons[0].points[1].x = width;

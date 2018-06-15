@@ -1,7 +1,7 @@
 main {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 main a {
@@ -32,14 +32,38 @@ main a {
         justify-content: center;
     }
 
-    article {
-        width: 730px;
+    @media (min-width: 850px) {
+        article {
+            max-width: 750px;
+        }
+
+        article > a {
+            max-width: 650px;
+        }
     }
 
-    article > a {
-        width: 630px;
+    @media (min-width: 700px) and (max-width: 850px) {
+        article {
+            max-width: 650px;
+        }
+
+        article > a {
+            max-width: 550px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        article {
+            max-width: 500px;
+        }
+
+        article > a {
+            max-width: 400px;
+        }
     }
 }
+
+
 
 .projects > article {
     border: 3px #0096e8 solid;

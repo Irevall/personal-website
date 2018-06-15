@@ -7,19 +7,24 @@
 main {
     font-family: 'Dosis', sans-serif;
     font-size: 1.3em;
-    display: inline-block;
-    margin-left: calc((100% - 500px) / 2);
-
 }
 
 .text {
     max-width: 500px;
 }
+
 @media (min-width: 1000px) {
+    main {
+         flex-direction: row;
+     }
+
+    .text {
+        padding-right: 245px;
+    }
+
     .photo {
-        position: absolute;
         margin-top: 15px;
-        margin-left: -200px;
+        margin-right: 45px;
     }
 
     .photo > img {
@@ -32,16 +37,15 @@ main {
 }
 
 @media (max-width: 1000px) {
-    .photo {
-        position: relative;
-        width: 100%;
-        margin: auto 0;
+    main {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .photo img {
         display: block;
-        height: 300px;
-        margin: 0 auto;
+        height: 250px;
     }
 
     .title {
@@ -49,19 +53,12 @@ main {
     }
 }
 
-
+.title {
+    display: inline-block;
+}
 .photo > img {
     border-radius: 50%;
     border: 3px #0096e8 solid;
-}
-
-.text {
-    display: inline-block;
-    margin-left: 45px;
-}
-
-.title {
-    display: inline-block;
 }
 
 .title > h1 {
