@@ -38,6 +38,14 @@
     margin: 3px auto 0 auto;
 }
 
+.picture-buttons > svg:hover {
+    cursor: pointer;
+}
+
+.picture-buttons > svg:hover > circle:not(.button-selected) {
+    fill: #c9cacc;
+}
+
 .picture-desc {
     text-align: center;
 }
