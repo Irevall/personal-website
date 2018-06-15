@@ -8,6 +8,16 @@
     <link rel="icon" href="icons/page-icon.png"/>
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <script src="node_modules/vue-i18n/dist/vue-i18n.min.js"></script>
+    <script src="languages-and-flag.js"></script>
+    <script>
+        messages.en.text = 'Whoops, you weren\'t supposed to end up here. I suggest going back, currently it\'s as empty as space behind us.';
+        messages.pl.text = 'Ups, nie miałeś się tutaj znaleźć. Sugeruję zawrócić, nie ma tu nic poza nicością otaczającego kosmosu.';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new Vue({i18n}).$mount('main');
+        });
+    </script>
+    </body>
     <style>
         main {
             width: 100%;
@@ -40,11 +50,4 @@
         <polygon points="0,0 0,150 1920,150" style="fill:#0263e2"/>
     </svg>
 </footer>
-<script src="languages-and-flag.js"></script>
-<script>
-    messages.en.text = 'Whoops, you weren\'t supposed to end up here. I suggest going back, currently it\'s as empty as space behind us.';
-    messages.pl.text = 'Ups, nie miałeś się tutaj znaleźć. Sugeruję zawrócić, nie ma tu nic poza nicością otaczającego kosmosu.';
-
-    new Vue({i18n}).$mount('main');</script>
-</body>
 </html>

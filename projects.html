@@ -9,6 +9,76 @@
     <link rel="icon" href="icons/page-icon.png"/>
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <script src="node_modules/vue-i18n/dist/vue-i18n.min.js"></script>
+    <script src="languages-and-flag.js"></script>
+    <script>
+        messages.en.list = {
+            desc: 'List of all projects I\'ve done or I\'m currently working on',
+            project0: 'Portfolio (this one)',
+            project1: 'Snake game',
+            project2: 'Color Game',
+            project3: 'Basic To Do List',
+            project4: 'Steam Avatars Gallery',
+            github: 'Or just check my',
+        };
+
+        messages.pl.list = {
+            desc: 'Lista wszystkich projektów nad którymi pracuje lub pracowałem',
+            project0: 'Portfolio (aktualna strona)',
+            project1: 'Gra w węża',
+            project2: 'Gra w kolory',
+            project3: 'Prosta lista rzeczy do zrobienia',
+            project4: 'Galeria Avatarów Steam',
+            github: 'Albo sprawdź mój',
+        };
+
+        messages.en.projects_desc = {
+            features: 'Features',
+            live: 'Live version',
+            source: 'Project source',
+            snake_feature1: 'Continuous, stable performance',
+            snake_feature2: 'All game options I could have thought about',
+            snake_feature21: 'tail eating',
+            snake_feature22: 'walking through walls',
+            snake_feature3: 'Pauses',
+            snake_feature4: 'Dynamic canvas size',
+            color_feature1: 'Different difficulties',
+            color_feature2: 'Smooth transitions',
+            color_misc: 'Disclaimer: project is not entirely mine, JS is, idea and CSS with help of a tutorial',
+            todo_feature1: 'Edit and delete',
+            todo_feature2: 'Sort elements',
+            todo_feature3: 'Sort by dragging',
+            todo_feature4: 'Remember previous lists (local storage)',
+            avatars_feature1: 'Grid',
+            avatars_feature2: 'Not much else right now, just looks pretty',
+            avatars_misc: 'Not live and not public (yet)',
+        };
+
+        messages.pl.projects_desc = {
+            features: 'Funkcje',
+            live: 'Wersja na żywo',
+            source: 'Źródło',
+            snake_feature1: 'Płynna i stabilna animacja',
+            snake_feature2: 'Wszystkie opcje jakie potrafiłem wymyślećAll game options I could have thought about',
+            snake_feature21: 'zjadanie ogona',
+            snake_feature22: 'przechodzneie pzez ściany',
+            snake_feature3: 'Pauzy',
+            snake_feature4: 'Dynamiczny rozmiar canvas',
+            color_feature1: 'Różne poziomy trudności',
+            color_feature2: 'Płynna animacja',
+            color_misc: 'Projekt nie jest w całości mojego autorstwa, JavaScript jest, pomysł i struktura są z tutoriala',
+            todo_feature1: 'Edycja i usuwanie',
+            todo_feature2: 'Sortowanie',
+            todo_feature3: 'Sortowanie przez przeciąganie',
+            todo_feature4: 'Zapamiętywanie list (local storage)',
+            avatars_feature1: 'Grid',
+            avatars_feature2: 'Niewiele więcej, po prostu ładnie wygląda',
+            avatars_misc: 'Jak na razie niepubliczna',
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            new Vue({i18n}).$mount('.title');
+            new Vue({i18n}).$mount('.projects');
+        });
+    </script>
     <script src="list_scroll.js"></script>
     <script src="footer_resize.js"></script>
 </head>
@@ -114,74 +184,5 @@
         <polygon points="0,0 0,150 1920,150" style="fill:#0263e2"/>
     </svg>
 </footer>
-<script src="languages-and-flag.js">
-</script>
-<script>
-    messages.en.list = {
-        desc: 'List of all projects I\'ve done or I\'m currently working on',
-        project0: 'Portfolio (this one)',
-        project1: 'Snake game',
-        project2: 'Color Game',
-        project3: 'Basic To Do List',
-        project4: 'Steam Avatars Gallery',
-        github: 'Or just check my',
-    };
-
-    messages.pl.list = {
-        desc: 'Lista wszystkich projektów nad którymi pracuje lub pracowałem',
-        project0: 'Portfolio (aktualna strona)',
-        project1: 'Gra w węża',
-        project2: 'Gra w kolory',
-        project3: 'Prosta lista rzeczy do zrobienia',
-        project4: 'Galeria Avatarów Steam',
-        github: 'Albo sprawdź mój',
-    };
-
-    messages.en.projects_desc = {
-        features: 'Features',
-        live: 'Live version',
-        source: 'Project source',
-        snake_feature1: 'Continuous, stable performance',
-        snake_feature2: 'All game options I could have thought about',
-        snake_feature21: 'tail eating',
-        snake_feature22: 'walking through walls',
-        snake_feature3: 'Pauses',
-        snake_feature4: 'Dynamic canvas size',
-        color_feature1: 'Different difficulties',
-        color_feature2: 'Smooth transitions',
-        color_misc: 'Disclaimer: project is not entirely mine, JS is, idea and CSS with help of a tutorial',
-        todo_feature1: 'Edit and delete',
-        todo_feature2: 'Sort elements',
-        todo_feature3: 'Sort by dragging',
-        todo_feature4: 'Remember previous lists (local storage)',
-        avatars_feature1: 'Grid',
-        avatars_feature2: 'Not much else right now, just looks pretty',
-        avatars_misc: 'Not live and not public (yet)',
-    };
-
-    messages.pl.projects_desc = {
-        features: 'Funkcje',
-        live: 'Wersja na żywo',
-        source: 'Źródło',
-        snake_feature1: 'Płynna i stabilna animacja',
-        snake_feature2: 'Wszystkie opcje jakie potrafiłem wymyślećAll game options I could have thought about',
-        snake_feature21: 'zjadanie ogona',
-        snake_feature22: 'przechodzneie pzez ściany',
-        snake_feature3: 'Pauzy',
-        snake_feature4: 'Dynamiczny rozmiar canvas',
-        color_feature1: 'Różne poziomy trudności',
-        color_feature2: 'Płynna animacja',
-        color_misc: 'Projekt nie jest w całości mojego autorstwa, JavaScript jest, pomysł i struktura są z tutoriala',
-        todo_feature1: 'Edycja i usuwanie',
-        todo_feature2: 'Sortowanie',
-        todo_feature3: 'Sortowanie przez przeciąganie',
-        todo_feature4: 'Zapamiętywanie list (local storage)',
-        avatars_feature1: 'Grid',
-        avatars_feature2: 'Niewiele więcej, po prostu ładnie wygląda',
-        avatars_misc: 'Jak na razie niepubliczna',
-    };
-    new Vue({i18n}).$mount('.title');
-    new Vue({i18n}).$mount('.projects');
-</script>
 </body>
 </html>
