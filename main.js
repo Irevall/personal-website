@@ -79,9 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 i18n.locale = 'en';
                 flagSwitch('en');
             }
-            if (window.location.pathname==='/resume') {
-                document.querySelector('embed').src = 'misc/resume-' + i18n.locale + '.pdf';
-            }
         });
 
         element.addEventListener('mouseover', (e) => {

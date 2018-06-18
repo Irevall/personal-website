@@ -13,19 +13,21 @@
     <script src="main.js"></script>
     <script>
         messages.en.text = {
+            source: 'misc/resume-en.pdf',
             part1: 'PDF at this resolution is barely readable anyway (and embed doesn\'t want to cooperate on mobile browsers), so ',
             part2: ' you can download my resume.',
             click: 'here'
         };
 
         messages.pl.text = {
+            source: 'misc/resume-pl.pdf',
             part1: 'PDFy w tej rozdzielczości i tak są trudne do rozczytania (poza tym nie embed nie chce współpracować na telefonach), więc ',
             part2: ' można pobrać moje CV.',
             click: 'tutaj'
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            new Vue({i18n}).$mount('.text');
+            new Vue({i18n}).$mount('main');
         });
     </script>
 </head>
@@ -50,7 +52,7 @@
     </div>
 </nav>
 <main>
-    <embed src="misc/resume-en.pdf" type='application/pdf' />
+    <embed v-bind:src="$t('text.source')" type="application/pdf" />
     <h1 class="text">{{ $t("text.part1") }}<a href="misc/resume.pdf" download="CV - Kuba Marek">{{ $t("text.click") }}</a>{{ $t("text.part2") }}</h1>
 </main>
 
