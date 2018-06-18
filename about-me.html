@@ -10,7 +10,7 @@
     <link rel="icon" href="icons/page-icon.png"/>
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <script src="node_modules/vue-i18n/dist/vue-i18n.min.js"></script>
-    <script src="languages-and-flag.js"></script>
+    <script src="main.js"></script>
     <script>
         messages.en.desc = {
             name: 'Name',
@@ -51,7 +51,6 @@
             new Vue({i18n}).$mount('.short-info');
         });
     </script>
-    <script src="footer_resize.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let date = new Date();

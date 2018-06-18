@@ -9,7 +9,7 @@
     <link rel="icon" href="icons/page-icon.png"/>
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <script src="node_modules/vue-i18n/dist/vue-i18n.min.js"></script>
-    <script src="languages-and-flag.js"></script>
+    <script src="main.js"></script>
     <script>
         messages.en.text = 'Whoops, you weren\'t supposed to end up here. I suggest going back, currently it\'s as empty as space behind us.';
         messages.pl.text = 'Ups, nie miałeś się tutaj znaleźć. Sugeruję zawrócić, nie ma tu nic poza nicością otaczającego kosmosu.';
@@ -22,11 +22,10 @@
     <style>
         h1 {
             width: 100%;
-            margin-top: 200px;
+            margin-top: 100px;
             text-align: center;
         }
     </style>
-    <script src="footer_resize.js"></script>
 </head>
 <nav>
     <a href="/" ><p>{{ $t("nav.home") }}</p></a>

@@ -10,7 +10,7 @@
     <link rel="icon" href="icons/page-icon.png"/>
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <script src="node_modules/vue-i18n/dist/vue-i18n.min.js"></script>
-    <script src="languages-and-flag.js"></script>
+    <script src="main.js"></script>
     <script>
         messages.en.list = {
             desc: 'List of all projects I\'ve done or I\'m currently working on',
@@ -80,8 +80,15 @@
             new Vue({i18n}).$mount('.projects');
         });
     </script>
-    <script src="list_scroll.js"></script>
-    <script src="footer_resize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.title').querySelectorAll('li').forEach((element, index) => {
+                element.addEventListener('click', () => {
+                    document.querySelector('main').querySelectorAll('article')[index].scrollIntoView({block: "start", behavior: "smooth"});
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <nav>
