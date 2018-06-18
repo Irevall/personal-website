@@ -16,6 +16,7 @@ main {
 
 .text {
     max-width: 500px;
+    padding-right: 200px;
 }
 
 .photo {
@@ -83,6 +84,8 @@ main {
     }
 
     .text {
+        max-width: 400px;
         font-size: 0.8em;
+        padding-right: 0;
     }
 }
