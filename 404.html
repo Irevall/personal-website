@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>404</title>
     <link rel="stylesheet" type="text/css"  href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="icon" href="icons/page-icon.png"/>
     <script src="node_modules/vue/dist/vue.min.js"></script>
     <script src="node_modules/vue-i18n/dist/vue-i18n.min.js"></script>
@@ -19,7 +20,7 @@
     </script>
     </body>
     <style>
-        main {
+        h1 {
             width: 100%;
             margin-top: 200px;
             text-align: center;
@@ -28,14 +29,22 @@
     <script src="footer_resize.js"></script>
 </head>
 <nav>
-    <a href="/"><p>{{ $t("nav.home") }}</p></a>
+    <a href="/" ><p>{{ $t("nav.home") }}</p></a>
     <a href="about"><p>{{ $t("nav.about") }}</p></a>
     <a href="projects"><p>{{ $t("nav.projects") }}</p></a>
     <a href="resume"><p>{{ $t("nav.resume") }}</p></a>
-    <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
-    <div class="flags">
-        <img src="icons/en-flag.png"/>
-        <img src="icons/pl-flag.png"/>
+    <div class="icons">
+        <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
+        <div class="flags">
+            <img src="icons/en-flag.png"/>
+            <img src="icons/pl-flag.png"/>
+        </div>
+        <div class="shrink">
+            <i class="fa fa-times"></i>
+        </div>
+        <div class="extend">
+            <i class="fa fa-bars"></i>
+        </div>
     </div>
 </nav>
 <main>

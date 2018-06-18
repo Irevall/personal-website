@@ -8,72 +8,30 @@ main a {
     text-decoration: underline;
 }
 
-@media (min-width: 1380px) {
-    .projects {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-column-gap: 100px;
-        justify-content: center;
-    }
-
-    article {
-        width: 600px;
-    }
-
-    article > a {
-        width: 500px;
-    }
+.projects {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 100px;
+    justify-content: center;
 }
 
-@media (max-width: 1380px) {
-    .projects {
-        display: grid;
-        grid-template-columns: auto;
-        justify-content: center;
-    }
-
-    @media (min-width: 850px) {
-        article {
-            max-width: 750px;
-        }
-
-        article > a {
-            max-width: 650px;
-        }
-    }
-
-    @media (min-width: 700px) and (max-width: 850px) {
-        article {
-            max-width: 650px;
-        }
-
-        article > a {
-            max-width: 550px;
-        }
-    }
-
-    @media (max-width: 700px) {
-        article {
-            max-width: 500px;
-        }
-
-        article > a {
-            max-width: 400px;
-        }
-    }
+article {
+    max-width: 600px;
 }
 
+article > a {
+    max-width: 500px;
+}
 
 
 .projects > article {
-    border: 3px #0096e8 solid;
-    border-radius: 7px;
+    background-color: #070b14;
     margin-bottom: 45px;
 }
 
 .title {
     margin-bottom: 15px;
-    width: 500px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -133,4 +91,26 @@ ul {
 
 li {
     font-size: 1.2em;
+}
+
+@media only screen and (max-width: 1380px) {
+    .projects {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .title > h1, .title > h2 {
+            font-size: 1.3em;
+        }
+
+        article > h1 {
+            font-size: 2.7em;
+        }
+
+        article > .text {
+            font-size: 0.8em;
+        }
+    }
 }

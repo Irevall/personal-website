@@ -1,20 +1,25 @@
-@media (min-width: 850px) {
-    .personal-photo{
-        width: 225px;
-    }
-
-    .text {
-        margin-left: 45px;
-    }
+.personal-photo{
+    width: calc(100% - 6px);
+    max-width: 225px;
+}
+.text {
+    margin-left: 45px;
 }
 
-@media (max-width: 850px) {
-    .personal-photo{
-        width: 175px;
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .short-info {
+        margin-right: auto;
     }
 
     .text {
-        margin-left: 25px;
+        margin-left: 0;
     }
 }
 

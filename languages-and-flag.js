@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('lang') === null) {
         localStorage.setItem('lang', 'en');
         i18n.locale ='en';
+        flagSwitch('en');
     } else {
         i18n.locale = localStorage.getItem('lang');
         flagSwitch(i18n.locale);
@@ -46,16 +47,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         element.addEventListener('mouseover', (e) => {
-           if (i18n.locale === 'pl') {
-               flagSwitch('en')
-           } else {
-               flagSwitch('pl');
-           }
+            if (document.body.clientWidth >= 600) {
+                if (i18n.locale === 'pl') {
+                    flagSwitch('en')
+                } else {
+                    flagSwitch('pl');
+                }
+            }
         });
 
         element.addEventListener('mouseout', (e) => {
             flagSwitch(i18n.locale);
         });
+    });
+
+    document.querySelector('.extend').addEventListener('click', () => {
+        document.querySelector('nav').classList.add('extended');
+    });
+
+    document.querySelector('.shrink').addEventListener('click', () => {
+        document.querySelector('nav').classList.remove('extended');
     });
 
     function flagSwitch(code) {

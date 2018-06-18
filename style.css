@@ -2,30 +2,41 @@
 
 body {
     margin: 0;
-    padding: 0;
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
     font-family: 'Lato', sans-serif;
     background: url("dark-background.png");
     color: #dee1e5;
 }
 
-nav {
-    padding: 0;
-    height: 55px;
-    width: 100%;
+.icons {
     display: flex;
-    align-items: center;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+nav {
+    margin: 0 0 50px 0;
+    height: 55px;
+    display: flex;
     background-color: #1f2a3a;
+    width: auto;
     font-size: 30px;
     color: #c9cacc;
     box-shadow: 0 1px 1px 0 black;
 }
 
 main {
+    margin: 0 5px;
     display: flex;
     justify-content: center;
+}
+
+.extend, .shrink {
+    display: none;
+    width: 30px;
 }
 
 nav > a {
@@ -40,55 +51,6 @@ nav > a {
     box-sizing: border-box;
 }
 
-@media (min-width: 800px) {
-    nav {
-        margin: 0 0 50px 0;
-    }
-
-    nav > a {
-        margin-left: 50px;
-    }
-
-    .github {
-        margin-right: 15px;
-    }
-
-    .flags {
-        margin-right: 10px;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 800px) {
-    nav {
-        margin: 0 0 30px 0;
-    }
-
-    nav > a {
-        margin-left: 15px;
-    }
-
-    .github {
-        margin-right: 10px;
-    }
-}
-
-@media (max-width: 600px) {
-    nav {
-        margin: 0 0 20px 0;
-    }
-
-    nav > a {
-        margin-left: 5px;
-    }
-
-    .github {
-        margin-right: 5px;
-    }
-
-    .flags {
-        margin-right: 5px;
-    }
-}
 
 a {
     text-decoration: none;
@@ -100,12 +62,17 @@ a:hover {
 }
 
 .github {
-    align-self: flex-end;
+    align-self: center;
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
     margin-left: auto;
 }
 
 .github > img {
+    align-self: center;
     width: 35px;
+    height: 35px;
 }
 
 nav > a > p {
@@ -122,6 +89,10 @@ nav > .active {
     display: none;
 }
 
+.flags {
+    align-self: center;
+    margin-right: 5px;
+}
 
 .flags img {
     cursor: pointer;
@@ -145,4 +116,88 @@ footer svg {
 footer polygon {
     padding: 0;
     margin: 0;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    nav {
+        margin: 0 0 30px 0;
+    }
+
+    nav a {
+        margin-left: 15px;
+    }
+
+    .github {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-rows: 1fr auto;
+
+        /*min-height: calc(100vh - 50px);*/
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    nav {
+        height: auto;
+        width: 100%;
+        position: fixed;
+    }
+
+    nav > a {
+        width: max-content;
+        padding-bottom: 0;
+        margin-left: 5px;
+    }
+
+    nav:not(.extended) > a:not(.active) {
+        display: none;
+    }
+
+    nav .extend {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+
+    .icons {
+        margin-top: 2px;
+        height: max-content;
+    }
+
+    .extended {
+        flex-direction: column;
+    }
+
+    .extended > a {
+        display: inline-block;
+    }
+
+    .flags .hidden {
+        display: block;
+    }
+
+    .flags *:not(.hidden) {
+        display: none;
+    }
+
+    .extended .extend {
+        display: none;
+    }
+
+    .extended .shrink {
+        display: block;
+    }
+
+    .extended .icons {
+        position: absolute;
+        right: 0;
+    }
+
 }
