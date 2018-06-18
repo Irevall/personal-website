@@ -14,13 +14,13 @@
     <script>
         messages.en.text = {
             welcome: 'Welcome to my portfolio.',
-            rest: 'I\'m a beginner web developer, mostly experienced in JavaScript, looking for an internship or a junior position that, ideally, would let me work during my Computer Science course.',
+            rest: 'I\'m a beginner web developer, mostly experienced in JavaScript, looking for an internship or a junior position that would let me work during my Computer Science course.',
             contact: 'Contact',
         };
 
         messages.pl.text = {
             welcome: 'Witaj w moim portfolio.',
-            rest: 'Jestem początkującym web developerem, piszącym głównie w JavaScript. Poszukuje stażu bądź ofert junior developera, które, w miarę możliwości, pozwolą mi pracę podczas studiowania Informatyki.',
+            rest: 'Jestem początkującym web developerem, piszącym głównie w JavaScript. Poszukuje stażu bądź ofert juniora, które pozwolą mi na pracę podczas studiowania Informatyki.',
             contact: 'Kontakt',
         };
 
@@ -38,20 +38,20 @@
         <i class="fa fa-bars"></i>
     </div>
     <a href="/" class="active"><p>{{ $t("nav.home") }}</p></a>
-    <a href="about" style="overflow: hidden"><p>{{ $t("nav.about") }}</p></a>
+    <a href="about"><p>{{ $t("nav.about") }}</p></a>
     <a href="projects"><p>{{ $t("nav.projects") }}</p></a>
     <a href="resume"><p>{{ $t("nav.resume") }}</p></a>
     <div class="icons">
         <a class="github" target="_blank" href="https://github.com/Irevall"><img src="icons/github.svg" alt="Github"></a>
         <div class="flags">
-            <img src="icons/en-flag.png"/>
-            <img src="icons/pl-flag.png"/>
+            <img src="icons/en-flag.png" alt="English language"/>
+            <img src="icons/pl-flag.png" alt="Język polski"/>
         </div>
     </div>
 </nav>
 <main>
     <div class="photo">
-        <img src="photos/placeholder.png" alt="Placeholder photo"/>
+        <img src="photos/home-photo.png" alt="Welcome photo"/>
     </div>
     <div class="text">
         <div class="title">

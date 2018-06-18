@@ -28,18 +28,16 @@
 
         messages.en.text = {
             education_title: 'Education',
-            education_text: 'I\'ve enjoyed writing scripts since couple years ago, when I started writing basic \'hacks\' for online browser games. For what it\'s worth I\'ve also finished Technical College in 2017 which also granted me "Certificate of competence, an IT technician". It wasn\'t until a couple months ago before I started getting more into it and... here we are.',
-            education_text2: 'I\'ve started Computer Science course at University of Wroclaw in 2017 but had to resign. I\'m planning on recruiting again this year, but I am prepared for switching to non full-time.',
+            education_text: 'My interest in programming began couple years ago, after I\'ve started using JavaScript add-ons for online browser games. It intrigued me how exactly they work and I\'ve started trying to make my own shortly after. For what it\'s worth I\'ve also finished Technical College in 2017 which granted me "Certificate of competence, an IT technician". It wasn\'t until a couple months ago though, before I started getting more into it and... here we are.',
             skills_title: 'Skills',
-            skills_text: 'I\'m still a beginner. I\'m by far most experienced with JavaScript, decent with simple website structure and styling and know basics of Nginx, Vue and MySQL. But I think I am quick learner and won\'t have much trouble learning other frameworks or backend if needed (I\'m learning Node now).',
+            skills_text: 'I\'m a beginner, but I\'m eager to learn amd gain experience. My english is pretty good, while not grammatically perfect, it\'s more than enough to read documentation and communicate. I\'m best with JavaScript, I really enjoy when all pieces fall into place it works as intended. I\'m decent with simple website structure and styling, I also know some Vue.js, MySQL and basics of Nginx. Currently I\'m learning Node.js.',
             other_title: 'Other',
-            other_text: 'My other hobbies include gaming and watching movies. I especially love competing in multiplayer games for meaningless prizes. :)',
+            other_text: 'My other hobbies include gaming and watching movies. I especially love competing with other players and climbing rankings in multiplayer games like Dota2 and Counter Strike. As for movies I try to keep up with recent releases, keep expanding my list of already seen titles and occasionally discuss some of the better ones. My favourite movie is The Grand Budapest Hotel, for its perfect mix of humor and action ',
         };
 
         messages.pl.text = {
             education_title: 'Edukacja',
             education_text: 'Pierwsze proste skrypty pisałem już dość dawno, do przeglądarkowych gier komputerowych. W 2017 ukończyłem EZN we Wrocławiu z tytułem Technika Informatyka. Mimo, że egzamin techniczny obejmował również tworzenie stron, to zacząłem się tym interesować dopiero parę miesięcy temu.',
-            education_text2: 'W zeszłym roku zostałem studentem Uniwersytetu Wrocławskiego (kierunek Informatyka), ale musiałem z nich zrezygnować. Planuję wrócić na studia w tym roku, ale jestem przygotowany by przejść na niepełny etat i kontynuować pracę.',
             skills_title: 'Umięjętności',
             skills_text: 'Dalej jestem początkującym. Najwięcej doświadczenia mam z JavaScriptem, umiem tworzyć proste struktury stron i je stylować, znam również podstawy Nginx, Vue i MySQL. Uważam jednak, że szybko się uczę i nie będę miał problemu z nauczeniem się innych frameworków, bądź jeśli potrzeba backendu (w tej chwili zaczynam się uczyć Node).',
             other_title: 'Inne',
@@ -76,7 +74,7 @@
     <div class="extend">
         <i class="fa fa-bars"></i>
     </div>
-    <a href="/" ><p>{{ $t("nav.home") }}</p></a>
+    <a href="/"><p>{{ $t("nav.home") }}</p></a>
     <a href="about" class="active"><p>{{ $t("nav.about") }}</p></a>
     <a href="projects"><p>{{ $t("nav.projects") }}</p></a>
     <a href="resume"><p>{{ $t("nav.resume") }}</p></a>
@@ -90,7 +88,7 @@
 </nav>
 <main>
     <div class="short-info">
-        <img class="personal-photo" src="photos/about-photo-1.png"/>
+        <img class="personal-photo" alt="Personal photo" src="photos/about-photo-1.png"/>
         <div class="picture-buttons">
             <svg height="16" width="16">
                 <circle class="button-selected" cx="8" cy="8" r="6" stroke="#0096e8" stroke-width="1" fill="#1f2a3a"/>
@@ -110,8 +108,6 @@
         <article>
             <h1>{{ $t("text.education_title") }}</h1>
             {{ $t("text.education_text") }}
-            <br/><br/>
-            {{ $t("text.education_text2") }}
         </article>
         <article>
             <h1>{{ $t("text.skills_title") }}</h1>

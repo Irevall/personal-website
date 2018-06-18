@@ -19,7 +19,7 @@
             project2: 'Color Game',
             project3: 'Basic To Do List',
             project4: 'Steam Avatars Gallery',
-            github: 'Or just check my',
+            github: 'Or check me on ',
         };
 
         messages.pl.list = {
@@ -49,9 +49,7 @@
             todo_feature2: 'Sort elements',
             todo_feature3: 'Sort by dragging',
             todo_feature4: 'Remember previous lists (local storage)',
-            avatars_feature1: 'Grid',
-            avatars_feature2: 'Not much else right now, just looks pretty',
-            avatars_misc: 'Not live and not public (yet)',
+            avatars_misc: 'Currently in development, will become public when finished',
         };
 
         messages.pl.projects_desc = {
@@ -98,7 +96,7 @@
     <div class="extend">
         <i class="fa fa-bars"></i>
     </div>
-    <a href="/" ><p>{{ $t("nav.home") }}</p></a>
+    <a href="/"><p>{{ $t("nav.home") }}</p></a>
     <a href="about"><p>{{ $t("nav.about") }}</p></a>
     <a href="projects" class="active"><p>{{ $t("nav.projects") }}</p></a>
     <a href="resume"><p>{{ $t("nav.resume") }}</p></a>
@@ -179,11 +177,6 @@
         <h1>{{ $t("list.project4") }}</h1>
         <a target="_blank" href="project-screens/steam-avatars.png"><img src="project-screens/steam-avatars.png"/></a>
         <div class="text">
-            <p>{{ $t("projects_desc.features") }}</p>
-            <ul>
-                <li>{{ $t("projects_desc.avatars_feature1") }}</li>
-                <li>{{ $t("projects_desc.avatars_feature2") }}</li>
-            </ul>
             <p>{{ $t("projects_desc.avatars_misc") }}</p>
         </div>
     </article>
