@@ -71,7 +71,7 @@
             todo_feature4: 'Zapamiętywanie list (local storage)',
             avatars_feature1: 'Grid',
             avatars_feature2: 'Niewiele więcej, po prostu ładnie wygląda',
-            avatars_misc: 'Jak na razie niepubliczna',
+            avatars_misc: 'W trakcie tworzenia, publikacja po zakończeniu',
         };
         document.addEventListener('DOMContentLoaded', () => {
             new Vue({i18n}).$mount('.title');
@@ -124,42 +124,45 @@
     </div>
 
     <div class="projects">
-        <article>
-            <h1>{{ $t("list.project1") }}</h1>
-            <a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html"><img src="project-screens/snake-game2.png"/></a>
-            <div class="text">
-                <p>{{ $t("projects_desc.features") }}</p>
+
+    <article>
+        <h1>{{ $t("list.project1") }}</h1>
+        <a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html"><img src="project-screens/snake-game2.png" alt="Snake game"/></a>
+        <div class="text">
+            <p>{{ $t("projects_desc.features") }}</p>
+            <ul>
+                <li>{{ $t("projects_desc.snake_feature1") }}</li>
+                <li>{{ $t("projects_desc.snake_feature2") }}</li>
                 <ul>
-                    <li>{{ $t("projects_desc.snake_feature1") }}</li>
-                    <li>{{ $t("projects_desc.snake_feature2") }}</li>
-                    <ul>
-                        <li>{{ $t("projects_desc.snake_feature21") }}</li>
-                        <li>{{ $t("projects_desc.snake_feature22") }}</li>
-                    </ul>
-                    <li>{{ $t("projects_desc.snake_feature3") }}</li>
-                    <li>{{ $t("projects_desc.snake_feature4") }}</li>
+                    <li>{{ $t("projects_desc.snake_feature21") }}</li>
+                    <li>{{ $t("projects_desc.snake_feature22") }}</li>
                 </ul>
-                <p><a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html">{{ $t("projects_desc.live") }}</a></p>
-                <p><a target="_blank" href="https://github.com/Irevall/snake-game">{{ $t("projects_desc.source") }}</a></p>
-            </div>
-        </article>
-        <article>
-            <h1>{{ $t("list.project2") }}</h1>
-            <a target="_blank" href="https://irevall.github.io/color-game/"><img src="project-screens/color-game.png"/></a>
-            <div class="text">
-                <p>{{ $t("projects_desc.features") }}</p>
-                <ul>
-                    <li>{{ $t("projects_desc.color_feature1") }}</li>
-                    <li>{{ $t("projects_desc.color_feature2") }}</li>
-                </ul>
-                <p><a target="_blank" href="https://irevall.github.io/color-game/">{{ $t("projects_desc.live") }}</a></p>
-                <p><a target="_blank" href="https://github.com/Irevall/color-game">{{ $t("projects_desc.source") }}</a></p>
-                <p>{{ $t("projects_desc.color_misc") }}</p>
-            </div>
-        </article>
+                <li>{{ $t("projects_desc.snake_feature3") }}</li>
+                <li>{{ $t("projects_desc.snake_feature4") }}</li>
+            </ul>
+            <p><a target="_blank" href="https://irevall.github.io/snake-game/snake-game.html">{{ $t("projects_desc.live") }}</a></p>
+            <p><a target="_blank" href="https://github.com/Irevall/snake-game">{{ $t("projects_desc.source") }}</a></p>
+        </div>
+    </article>
+
+    <article>
+        <h1>{{ $t("list.project2") }}</h1>
+        <a target="_blank" href="https://irevall.github.io/color-game/"><img src="project-screens/color-game.png" alt="Color game"/></a>
+        <div class="text">
+            <p>{{ $t("projects_desc.features") }}</p>
+            <ul>
+                <li>{{ $t("projects_desc.color_feature1") }}</li>
+                <li>{{ $t("projects_desc.color_feature2") }}</li>
+            </ul>
+            <p><a target="_blank" href="https://irevall.github.io/color-game/">{{ $t("projects_desc.live") }}</a></p>
+            <p><a target="_blank" href="https://github.com/Irevall/color-game">{{ $t("projects_desc.source") }}</a></p>
+            <p>{{ $t("projects_desc.color_misc") }}</p>
+        </div>
+    </article>
+
     <article id="to-do">
         <h1>{{ $t("list.project3") }}</h1>
-        <a target="_blank" href="https://irevall.github.io/to-do-list/toDoList.html"><img src="project-screens/to-do-list.png"/></a>
+        <a target="_blank" href="https://irevall.github.io/to-do-list/toDoList.html"><img src="project-screens/to-do-list.png" alt="To do list"/></a>
         <div class="text">
             <p>{{ $t("projects_desc.features") }}</p>
             <ul>
@@ -175,7 +178,7 @@
 
     <article>
         <h1>{{ $t("list.project4") }}</h1>
-        <a target="_blank" href="project-screens/steam-avatars.png"><img src="project-screens/steam-avatars.png"/></a>
+        <a target="_blank" href="project-screens/steam-avatars.png"><img src="project-screens/steam-avatars.png" alt="Steam avatars"/></a>
         <div class="text">
             <p>{{ $t("projects_desc.avatars_misc") }}</p>
         </div>
