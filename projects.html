@@ -13,7 +13,7 @@
     <script src="main.js"></script>
     <script>
         messages.en.list = {
-            desc: 'List of all projects I\'ve done or I\'m currently working on',
+            desc: 'List of all projects I\'ve done so far',
             project0: 'Portfolio (this one)',
             project1: 'Snake game',
             project2: 'Color Game',
@@ -23,7 +23,7 @@
         };
 
         messages.pl.list = {
-            desc: 'Lista wszystkich projektów nad którymi pracuje lub pracowałem',
+            desc: 'Lista wszystkich projektów nad którymi do tej pory pracowałem',
             project0: 'Portfolio (aktualna strona)',
             project1: 'Gra w węża',
             project2: 'Gra w kolory',
@@ -59,9 +59,9 @@
             live: 'Wersja na żywo',
             source: 'Źródło',
             snake_feature1: 'Płynna i stabilna animacja',
-            snake_feature2: 'Wszystkie opcje jakie potrafiłem wymyślećAll game options I could have thought about',
+            snake_feature2: 'Wszystkie opcje jakie tylko wymyśliłem',
             snake_feature21: 'zjadanie ogona',
-            snake_feature22: 'przechodzneie pzez ściany',
+            snake_feature22: 'przechodzenie pzez ściany',
             snake_feature3: 'Pauzy',
             snake_feature4: 'Dynamiczny rozmiar canvas',
             color_feature1: 'Różne poziomy trudności',
@@ -84,7 +84,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.title').querySelectorAll('li').forEach((element, index) => {
                 element.addEventListener('click', () => {
-                    document.querySelector('main').querySelectorAll('article')[index].scrollIntoView({block: "start", behavior: "smooth"});
+                    document.querySelector('main').querySelectorAll('article')[index - 1].scrollIntoView({block: "start", behavior: "smooth"});
                 });
             });
         });

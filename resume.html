@@ -13,14 +13,14 @@
     <script src="main.js"></script>
     <script>
         messages.en.text = {
-            part1: 'PDF at this resolution is barely readable anyway (and embed doesn\'t work on mobile browsers anyway), so ',
-            part2: ' you can download my resume',
+            part1: 'PDF at this resolution is barely readable anyway (and embed doesn\'t want to cooperate on mobile browsers), so ',
+            part2: ' you can download my resume.',
             click: 'here'
         };
 
         messages.pl.text = {
-            part1: 'PDFy w tej rozdzielczości i tak są trudne do rozczytania (poza tym nie embed nie działa na telefonie), więc ',
-            part2: ' można pobrać moje CV',
+            part1: 'PDFy w tej rozdzielczości i tak są trudne do rozczytania (poza tym nie embed nie chce współpracować na telefonach), więc ',
+            part2: ' można pobrać moje CV.',
             click: 'tutaj'
         };
 
@@ -51,7 +51,7 @@
 </nav>
 <main>
     <embed src="misc/resume-en.pdf" type='application/pdf' />
-    <div class="text">{{ $t("text.part1") }}<a href="misc/resume.pdf" download="CV - Kuba Marek">{{ $t("text.click") }}</a>{{ $t("text.part2") }}</div>
+    <h1 class="text">{{ $t("text.part1") }}<a href="misc/resume.pdf" download="CV - Kuba Marek">{{ $t("text.click") }}</a>{{ $t("text.part2") }}</h1>
 </main>
 
 <footer>
