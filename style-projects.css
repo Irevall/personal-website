@@ -48,12 +48,8 @@ article > a {
     text-decoration: none;
 }
 
-.title ul {
-    display: inline-block;
+.title li:not(:first-of-type):hover {
     cursor: pointer;
-}
-
-.title li:hover {
     color: #0096e8;
 }
 
