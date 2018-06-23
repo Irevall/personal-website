@@ -19,6 +19,7 @@
             project2: 'Color Game',
             project3: 'Basic To Do List',
             project4: 'Steam Avatars Gallery',
+            project5: 'TERA data parser',
             github: 'Or check me on ',
         };
 
@@ -29,6 +30,7 @@
             project2: 'Gra w kolory',
             project3: 'Prosta lista rzeczy do zrobienia',
             project4: 'Galeria Avatarów Steam',
+            project5: 'Parser danych z TERY',
             github: 'Albo sprawdź mój',
         };
 
@@ -36,6 +38,13 @@
             features: 'Features',
             live: 'Live version',
             source: 'Project source',
+            tera_feature1: 'Create database',
+            tera_feature2: 'Fill it with data from JSON',
+            tera_feature3: 'Create html representation from that DB',
+            tera_feature4: 'Hide/expand data',
+            tera_misc: 'Currently in development, soon to be:',
+            tera_misc2: 'Edit data in HTML and send to DB',
+            tera_misc3: 'Do all that automatically',
             snake_feature1: 'Continuous, stable performance',
             snake_feature2: 'All game options I could have thought about',
             snake_feature21: 'tail eating',
@@ -56,6 +65,13 @@
             features: 'Funkcje',
             live: 'Wersja na żywo',
             source: 'Źródło',
+            tera_feature1: 'Tworzenie bazy danych',
+            tera_feature2: 'Przetworzenie do niej danych z JSON\'a',
+            tera_feature3: 'Stworzenie reprezentacji w HTML danych z bazy',
+            tera_feature4: 'Chowanie mniej ważnych danych',
+            tera_misc: 'W trakcie tworzenia, niedługo:',
+            tera_misc2: 'Edycja danych w HTML i przesłanie ich do bazy',
+            tera_misc3: 'Automatyzacja',
             snake_feature1: 'Płynna i stabilna animacja',
             snake_feature2: 'Wszystkie opcje jakie tylko wymyśliłem',
             snake_feature21: 'zjadanie ogona',
@@ -114,6 +130,7 @@
         <div class="list">
             <ul>
                 <li>Portfolio <a target="_blank" href="https://github.com/Irevall/portfolio.irevall.me">{{ $t("list.project0") }}</a></li>
+                <li>{{ $t("list.project5") }}</li>
                 <li>{{ $t("list.project1") }}</li>
                 <li>{{ $t("list.project2") }}</li>
                 <li>{{ $t("list.project3") }}</li>
@@ -124,6 +141,27 @@
     </div>
 
     <div class="projects">
+
+    <article>
+        <h1>{{ $t("list.project5") }}</h1>
+        <a target="_blank" href="https://github.com/Irevall/TERA-data-parser"><img src="project-screens/TERA-data-parser.png" alt="TERA data parser"/></a>
+        <div class="text">
+            <p>{{ $t("projects_desc.features") }}</p>
+            <ul>
+                <li>{{ $t("projects_desc.tera_feature1") }}</li>
+                <li>{{ $t("projects_desc.tera_feature2") }}</li>
+                <li>{{ $t("projects_desc.tera_feature3") }}</li>
+                <li>{{ $t("projects_desc.tera_feature4") }}</li>
+                <li>{{ $t("projects_desc.snake_feature4") }}</li>
+            </ul>
+            <p><a target="_blank" href="https://github.com/Irevall/TERA-data-parser">{{ $t("projects_desc.source") }}</a></p>
+            <p>{{ $t("projects_desc.tera_misc") }}</p>
+            <ul>
+                <li>{{ $t("projects_desc.tera_misc2") }}</li>
+                <li>{{ $t("projects_desc.tera_misc3") }}</li>
+            </ul>
+        </div>
+    </article>
 
     <article>
         <h1>{{ $t("list.project1") }}</h1>

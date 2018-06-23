@@ -13,14 +13,14 @@
     <script src="main.js"></script>
     <script>
         messages.en.text = {
-            source: 'misc/resume-en.pdf',
+            source: 'misc/CV-Kuba_Marek-en.pdf',
             part1: 'You can download my resume ',
             part2: '.',
-            click: 'here',
+            click: 'here'
         };
 
         messages.pl.text = {
-            source: 'misc/resume-pl.pdf',
+            source: 'misc/CV-Kuba_Marek-pl.pdf',
             part1: 'Moje CV jest dostępne do pobrania ',
             part2: '.',
             click: 'tutaj'
@@ -53,7 +53,7 @@
 </nav>
 <main>
     <embed v-bind:src="$t('text.source')" type="application/pdf" />
-    <h1 class="text">{{ $t("text.part1") }}<a href="misc/resume.pdf" download="CV - Kuba Marek">{{ $t("text.click") }}</a>{{ $t("text.part2") }}</h1>
+    <h1 class="text">{{ $t("text.part1") }}<a v-bind:href="$t('text.source')" download="CV - Kuba Marek">{{ $t("text.click") }}</a>{{ $t("text.part2") }}</h1>
 </main>
 
 <footer>
