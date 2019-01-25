@@ -24,10 +24,8 @@
 </script>
 
 <style lang="scss" scoped>
-    /*@import url('https://fonts.googleapis.com/css?family=Dosis:400,600');*/
     @import url('https://fonts.googleapis.com/css?family=Poiret+One');
     @import url('https://fonts.googleapis.com/css?family=Baumans');
-    /*@import url('https://fonts.googleapis.com/css?family=Megrim');*/
 
     .container {
         flex-direction: row;

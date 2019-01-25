@@ -47,6 +47,7 @@
                 require('../assets/photos/about-photo-3.png')
             ];
 
+
             document.querySelector('.picture-buttons').querySelectorAll('svg').forEach((el, index) => {
                 el.addEventListener('click', () => {
                     document.querySelector('.picture-buttons').querySelectorAll('svg').forEach((el) => {
