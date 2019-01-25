@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "home": "Główna",
+    "about": "O mnie",
+    "projects": "Projekty",
+    "resume": "CV"
+  },
+  "home": {
+    "welcome": "Witaj w moim portfolio.",
+    "rest": "Jestem web developerem, piszącym w JavaScript'cie i Node. Szukam pracy jako Junior.",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "info": {
+      "name": "Imie",
+      "age": "Wiek",
+      "years": "lata",
+      "from": "Skąd"
+    },
+    "education": {
+      "title": "Edukacja",
+      "text": "Zainteresowałem się programowaniem już parę lat temu, kiedy zacząłem używać wtyczek w JS do gier przeglądarkowych. Zainteresowałem się jak działają i niedługo po tym sam probowałem je napisać. Przez to zainteresowanie informatyką poszedłem do Technikum Informatycznego, EZN, które ukończyłem w 2017 roku. Otrzymałem też tytuł Technika Informatyka. Niestety, nauczyłem się w ten sposób jedynie podstaw, a resztę wiedzy zdobywam sam."
+    },
+    "skills": {
+      "title": "Umiejętności",
+      "text": "Dalej jest ze mnie początkujący, ale lubię się uczyć i chcę zdobywać doświadczenie. Mój angielski jest niezły, posiadam FCE na poziomie B2, i chociaż czasem popełniam błędy, bez problemu poradzę sobię z dokumentacją i komunikacją. Najlepiej radzę sobie z JavaScript'em (i Node'm), tego używam w większości swoich projektów. Niedawno zacząłem używać również Vue, znam też SQL i oczywiście HTML + CSS oraz podstawy nginx'a."
+    },
+    "other": {
+      "title": "Inne",
+      "text": "Moje pozostałe hobby to gry komputerowe i kinematografia. Uwielbiam rywalizować z innymi graczami w grach multiplayer takich jak Dota2 i Counter-Strike. Parę razy wziąłem też udział w turniejach online. Jeśli chodzi o filmy to nie tylko lubię je oglądać, ale interesuję się też tym jak są tworzone. Moim ulubionym filmem jest Grand Budapest Hotel, ponieważ idealnie łączy humor z akcją."
+    }
+  },
+  "projects": {
+    "desc": "Lista projektów jakie do tej pory stworzyłem",
+    "github": "Albo sprawdź mój",
+    "features": "Funkcje",
+    "source": "Źródło",
+    "live": "Wersja na żywo",
+    "list": [
+      {
+        "title": "apothes",
+        "source": "https://github.com/Irevall/apothes",
+        "live": "http://apothes.irevall.me",
+        "screen": "apothes",
+        "features": [
+          "Wycinanie obrazków",
+          "Pobranie lub upload na serwer",
+          "Dynamiczna galeria z 'lazy loading'",
+          "Zgłaszanie obrazków",
+          "Panel administracyjny"
+        ]
+      },
+      {
+        "title": "Wąż",
+        "source": "https://github.com/Irevall/snake-game",
+        "live": "https://irevall.github.io/snake-game/snake-game.html",
+        "screen": "snake-game",
+        "features": [
+          "Stabilna wydajność",
+          "Płynna animacja",
+          "Pausy"
+        ]
+      },
+      {
+        "title": "Parser danych z TERY (nie dokończony)",
+        "source": "https://github.com/Irevall/TERA-data-parser",
+        "screen": "TERA-data-parser",
+        "features": [
+          "Tworzenie bazy danych z JSON'a",
+          "Wyświetlanie tych danych jako tabeli",
+          "Manipulacja danymi"
+        ]
+      },
+      {
+        "title": "Gra w kolory",
+        "source": "https://github.com/Irevall/color-game",
+        "live": "https://irevall.github.io/color-game/",
+        "screen": "color-game",
+        "features": [
+          "Różne poziomy trudności",
+          "Płynne przejścia"
+        ]
+      },
+      {
+        "title": "Prosta lista to-do",
+        "source": "https://github.com/Irevall/to-do-list",
+        "live": "https://irevall.github.io/to-do-list/toDoList.html",
+        "screen": "to-do-list",
+        "features": [
+          "Edycja i usuwanie",
+          "Sortowanie (również przez przeciąganie)",
+          "Zapisanie (w local storage)"
+        ]
+      }
+    ]
+
+  },
+  "resume": {
+    "source": "CV-Kuba_Marek-pl",
+    "text": "Moje CV można pobrać",
+    "click": "tutaj"
+  },
+  "404": "Ups, nie miałeś się tutaj znaleźć. Sugeruję zawrócić, nie ma tu nic poza nicością otaczającego kosmosu."
+}

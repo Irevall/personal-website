@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "home": {
+    "welcome": "Welcome to my portfolio.",
+    "rest": "I'm a web developer, focused on JavaScript and Node. Looking for work as a Junior.",
+    "contact": "Contact"
+  },
+  "about": {
+    "info": {
+      "name": "Name",
+      "age": "Age",
+      "years": "years",
+      "from": "From"
+    },
+    "education": {
+      "title": "Education",
+      "text": "My interest in programming began a couple of years ago, after I've started using JavaScript add-ons for an online browser game and shortly I found myself trying to write my own. It made me more interested in IT so I went to professional technical school, EZN, which I completed in 2017. It also granted me \"Certificate of competence, an IT technician\". Unfortunately it only taught me the basics, so most of my knowledge I learnt myself."
+    },
+    "skills": {
+      "title": "Skills",
+      "text": "I'm still much of a beginner, but I'm eager to learn and gain experience. My English is decent, I have a FCE on B2 level, while I'm not grammatically perfect, it's more than enough to understand documentation and handle communication. I'm best with JavaScript (and Node), that's what I use in most of my projects. Recently I picked up Vue, I also know SQL, obviously some HTML + CSS and basics of nginx."
+    },
+    "other": {
+      "title": "Other",
+      "text": "My other hobbies include gaming and cinematography. I really like competing with other players in multiplayer games like Dota2 and Counter-Strike. I've even participated in couple amateur tournaments (with various success). As for movies I not only enjoy watching them but I am also interested in the logistics behind them. My favourite movie is probably The Grand Budapest Hotel, for its perfect mix of humor and action."
+    }
+  },
+  "projects": {
+    "desc": "List of all other projects I've done so far",
+    "github": "Or check me on",
+    "features": "Features",
+    "source": "Project source",
+    "live": "Live version",
+    "list": [
+      {
+        "title": "apothes",
+        "source": "https://github.com/Irevall/apothes",
+        "live": "http://apothes.irevall.me",
+        "screen": "apothes",
+        "features": [
+          "Cropping images",
+          "Downloading and uploading those crops",
+          "Dynamic gallery with lazy loading",
+          "Reporting images",
+          "Dashboard admin panel"
+        ]
+      },
+      {
+        "title": "Snake game",
+        "source": "https://github.com/Irevall/snake-game",
+        "live": "https://irevall.github.io/snake-game/snake-game.html",
+        "screen": "snake-game",
+        "features": [
+          "Stable performance",
+          "Fluid animation",
+          "Pausing"
+        ]
+      },
+      {
+        "title": "TERA data parser (unfinished)",
+        "source": "https://github.com/Irevall/TERA-data-parser",
+        "screen": "TERA-data-parser",
+        "features": [
+          "Creates DB from JSON",
+          "Serve that data as a table",
+          "Manipulate data"
+        ]
+      },
+      {
+        "title": "Color game",
+        "source": "https://github.com/Irevall/color-game",
+        "live": "https://irevall.github.io/color-game/",
+        "screen": "color-game",
+        "features": [
+          "Different difficulties",
+          "Smooth transitions"
+        ]
+      },
+      {
+        "title": "Basic to-do list",
+        "source": "https://github.com/Irevall/to-do-list",
+        "live": "https://irevall.github.io/to-do-list/toDoList.html",
+        "screen": "to-do-list",
+        "features": [
+          "Edit and delate",
+          "Sort (also by dragging)",
+          "Save (in local storage)"
+        ]
+      }
+    ]
+
+  },
+  "resume": {
+    "source": "CV-Kuba_Marek-en",
+    "text": "You can download my resume",
+    "click": "here"
+  },
+  "404": "Whoops, you weren't supposed to end up here. I suggest going back, currently it's as empty as space behind us."
+}
