@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <embed :src="`./assets/resumes/${$t('resume.source')}.pdf`" type="application/pdf" />
-        <h1 class="text">{{ $t('resume.text') }} <a v-bind:href="`../assets/resumes/${$t('resume.source')}.pdf`" download="CV - Kuba Marek">{{ $t('resume.click') }}</a>.</h1>
+        <h1 class="text">{{ $t('resume.text') }} <a :href="`../assets/resumes/${$t('resume.source')}.pdf`" download="CV - Kuba Marek">{{ $t('resume.click') }}</a>.</h1>
     </div>
 </template>
 

@@ -41,13 +41,19 @@
             let date = new Date();
             document.querySelector('.age').innerHTML = (date.getFullYear() - 1997);
 
+            const photos = [
+                require('../assets/photos/about-photo-1.png'),
+                require('../assets/photos/about-photo-2.png'),
+                require('../assets/photos/about-photo-3.png')
+            ];
+
             document.querySelector('.picture-buttons').querySelectorAll('svg').forEach((el, index) => {
                 el.addEventListener('click', () => {
                     document.querySelector('.picture-buttons').querySelectorAll('svg').forEach((el) => {
                         el.querySelector('circle').classList.remove('button-selected');
                     });
                     el.querySelector('circle').classList.add('button-selected');
-                    document.querySelector('.personal-photo').src = `../assets/photos/about-photo-${[index + 1]}.png`;
+                    document.querySelector('.personal-photo').src = photos[index];
                 });
             });
         }
