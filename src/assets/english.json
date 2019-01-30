@@ -7,7 +7,7 @@
   },
   "home": {
     "welcome": "Welcome to my portfolio.",
-    "rest": "I'm a web developer, focused on JavaScript and Node. Looking for work as a Junior.",
+    "rest": "I'm a web developer, focused on JavaScript and Node. I'm looking for work as a Junior dev, in Wroclaw or remotely.",
     "contact": "Contact"
   },
   "about": {
@@ -19,11 +19,11 @@
     },
     "education": {
       "title": "Education",
-      "text": "My interest in programming began a couple of years ago, after I've started using JavaScript add-ons for an online browser game and shortly I found myself trying to write my own. It made me more interested in IT so I went to professional technical school, EZN, which I completed in 2017. It also granted me \"Certificate of competence, an IT technician\". Unfortunately it only taught me the basics, so most of my knowledge I learnt myself."
+      "text": "I've been passionate about computers since I was little, which pushed me to attend professional technical school. Graduation granted me \"Certificate of competence, an IT technician\", but unfortunately school only taught me the basics, so I've been learning on my own ever since."
     },
     "skills": {
       "title": "Skills",
-      "text": "I'm still much of a beginner, but I'm eager to learn and gain experience. My English is decent, I have a FCE on B2 level, while I'm not grammatically perfect, it's more than enough to understand documentation and handle communication. I'm best with JavaScript (and Node), that's what I use in most of my projects. Recently I picked up Vue, I also know SQL, obviously some HTML + CSS and basics of nginx."
+      "text": "I like learning new things and gaining experience. I'm honest and earnest in my work. I have English certificate on B2 level, so I don't have any problems understanding documentation and handling communication. I'm best with JavaScript (and Node), I also use Vue. I'm able to create site structure (HTML + CSS), but it doesn't always show as I tend to put too much focus on Back-end (or get distracted by new projects). I know SQL (sqlite), basics of Webpack and nginx. Currently I'm learning SASS and React."
     },
     "other": {
       "title": "Other",

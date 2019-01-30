@@ -7,7 +7,7 @@
   },
   "home": {
     "welcome": "Witaj w moim portfolio.",
-    "rest": "Jestem web developerem, piszącym w JavaScript'cie i Node. Szukam pracy jako Junior.",
+    "rest": "Jestem web developerem, piszę głownie w JavaScript'cie i Node. Szukam pracy jako Junior, we Wrocławiu bądź zdalnie.",
     "contact": "Kontakt"
   },
   "about": {
@@ -19,11 +19,11 @@
     },
     "education": {
       "title": "Edukacja",
-      "text": "Zainteresowałem się programowaniem już parę lat temu, kiedy zacząłem używać wtyczek w JS do gier przeglądarkowych. Zainteresowałem się jak działają i niedługo po tym sam probowałem je napisać. Przez to zainteresowanie informatyką poszedłem do Technikum Informatycznego, EZN, które ukończyłem w 2017 roku. Otrzymałem też tytuł Technika Informatyka. Niestety, nauczyłem się w ten sposób jedynie podstaw, a resztę wiedzy zdobywam sam."
+      "text": "Komputery interesowały mnie od dziecka, więc pragnąc poszerzać wiedzę udałem się do Technikum. Otrzymałem w ten sposób Technika Informatyka. Niestety, nauczyło mnie to jedynie podstaw, a resztę wiedzy zdobywam od tej pory sam."
     },
     "skills": {
       "title": "Umiejętności",
-      "text": "Dalej jest ze mnie początkujący, ale lubię się uczyć i chcę zdobywać doświadczenie. Mój angielski jest niezły, posiadam FCE na poziomie B2, i chociaż czasem popełniam błędy, bez problemu poradzę sobię z dokumentacją i komunikacją. Najlepiej radzę sobie z JavaScript'em (i Node'm), tego używam w większości swoich projektów. Niedawno zacząłem używać również Vue, znam też SQL i oczywiście HTML + CSS oraz podstawy nginx'a."
+      "text": "Lubię się uczyć i chcę zdobywać doświadzczenie. Jestem uczciwy, a w swojej pracy sumienny. Posiadam certyfikat z języka Angielskiego na poziomie B2, więc bez problemu radzę sobię z dokumentacją i komunikacją. Najwięcej posługuje się JavaScript'em (i Node'm), używam również Vue. Potrafię tworzyć struktury stron (HTML + CSS), niestety nie zawsze to widać, gdyż często za bardzo skupiam się na Back-endzie. Znam też SQL (sqlite), podstawy Webpacka i nginx'a. Obecnie uczę się wykorzystywać SASS i React."
     },
     "other": {
       "title": "Inne",
