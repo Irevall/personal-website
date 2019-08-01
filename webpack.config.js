@@ -3,7 +3,8 @@ const path = require('path');
 
 const { DefinePlugin } = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -12,14 +13,19 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
+  devServer: {
+    contentBase: './src/static',
+    historyApiFallback: true,
+  },
   plugins: [
     new VueLoaderPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Portfolio',
       template: path.resolve(__dirname, './src/index.html'),
-      favicon: path.resolve(__dirname, './src/assets/icon.png')
+      favicon: path.resolve(__dirname, './src/static/icon.png')
     }),
-    // new CopyWebpackPlugin([{ from: 'src/static', to: './' }]),
+    new CopyWebpackPlugin([{ from: 'src/static', to: './' }]),
     new DefinePlugin({
       PRODUCTION: JSON.stringify(process.env.PRODUCTION === 'true'),
     })
