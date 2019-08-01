@@ -1,41 +1,22 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-import home from '../components/home.vue'
-import about from '../components/about.vue'
-import projects from '../components/projects.vue'
-import resume from '../components/resume.vue'
-import not_found from '../components/not_found.vue'
+import routes from './routes';
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: home,
-        },
-        {
-            path: '/about',
-            component: about
-        },
-        {
-            path: '/projects',
-            component: projects
-        },
-        {
-            path: '/resume',
-            component: resume
-        },
-        {
-              path: '/404',
-            name: 'not_found',
-            component: not_found
-        },
-        {
-            path: '*',
-            redirect: '/404'
-        },
-    ]
-})
+const router = new VueRouter({
+  routes,
+  mode: 'history',
+  scrollBehavior: (from, to, savedPosition) => {
+    return savedPosition || { x: 0, y: 0 };
+  },
+});
+
+router.onError(err => {
+  if (err.type !== 'missing') throw err;
+  console.log('Router error, reloading', err);
+  window.location.reload(true);
+});
+
+export default router;
