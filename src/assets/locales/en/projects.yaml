@@ -1,0 +1,13 @@
+title: Projects overview
+
+professional:
+  title: Work projects
+  subtitle: blabla
+  projects:
+    - name: Lootpark
+      url: https://lootpark.com
+      description: blabla
+
+    - name: Rocket Swaps
+      url: https://rocketswaps.com
+      description: blabla

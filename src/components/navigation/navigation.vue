@@ -34,6 +34,7 @@
     margin: 0 0 3rem 0;
     height: 4rem;
     background-color: #1f2a3a;
+    font-family: 'Muli', sans-serif;
     box-shadow: 0 1px 1px 0 black;
   }
 
