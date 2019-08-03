@@ -1,6 +1,6 @@
 <template>
   <main>
-    <app-welcome @jump="jumpToProjects"/>
+    <app-welcome ref="welcome" @jump="jumpTo"/>
     <app-projects ref="projects"/>
   </main>
 </template>
@@ -13,9 +13,8 @@
     name: 'view-home',
     components: { AppWelcome, AppProjects },
     methods: {
-      jumpToProjects() {
-        console.log(this.$refs.projects);
-        this.$refs.projects.$el.scrollIntoView({behavior: 'smooth'});
+      jumpTo(target) {
+        this.$refs[target].$el.scrollIntoView({behavior: 'smooth'});
       },
     }
   };

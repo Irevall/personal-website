@@ -2,12 +2,33 @@ title: Projects overview
 
 professional:
   title: Work projects
-  subtitle: blabla
   projects:
     - name: Lootpark
       url: https://lootpark.com
       description: blabla
 
     - name: Rocket Swaps
-      url: https://rocketswaps.com
+      url: https://rocketswaps.com/
+      description: blabla
+
+personal:
+  title: Personal projects
+  description:
+    - All (and more) of thse projects are available on my {{0}}.
+    - Unfortunately, most of them weren't updated for over a year, so it hardly reflects on my current code.
+  projects:
+    - name: Portfolio
+      url: https://portfolio.irevall.me
+      description: blabla
+
+    - name: Apothes
+      url: https://github.com/Irevall/apothes
+      description: blabla
+
+    - name: TERA data parser
+      url: https://github.com/Irevall/TERA-data-parser
+      description: blabla
+
+    - name: Snake game
+      url: https://github.com/Irevall/snake-game
       description: blabla

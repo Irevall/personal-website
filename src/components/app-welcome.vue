@@ -26,14 +26,14 @@
     components: { Navigation },
     data () {
       return {
-        lastScrollTop: 0,
+        scrolling: false,
       }
     },
     methods: {
       scrollListener(event) {
         if (event.deltaY > 0) {
           event.preventDefault();
-          this.$emit('jump');
+          this.$emit('jump', 'projects');
         }
       },
     }
