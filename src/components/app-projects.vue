@@ -3,22 +3,22 @@
     <span class="app-projects__title">{{ $t('projects:title')}}</span>
     <div class="app-projects__section app-projects__professional">
       <span class="app-projects__section-title">{{ $t('projects:professional.title')}}</span>
-      <experience-project class="app-projects__project" v-for="project in professionalProjects" :key="project.name" v-bind="project"/>
+      <projects-project class="app-projects__project" v-for="project in professionalProjects" :key="project.name" v-bind="project"/>
     </div>
 
     <div class="app-projects__section app-projects__personal">
       <span class="app-projects__section-title">{{ $t('projects:personal.title')}}</span>
-      <experience-project class="app-projects__project" v-for="project in personalProjects" :key="project.name" v-bind="project"/>
+      <projects-project class="app-projects__project" v-for="project in personalProjects" :key="project.name" v-bind="project"/>
     </div>
   </div>
 </template>
 
 <script>
-  import ExperienceProject from '@/components/experience/experience-project';
+  import ProjectsProject from '@/components/projects/projects-project';
 
   export default {
     name: 'app-projects',
-    components: { ExperienceProject },
+    components: { ProjectsProject },
     computed: {
       professionalProjects() {
         return this.$i18n.t('projects:professional.projects', { returnObjects: true });

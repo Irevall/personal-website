@@ -1,5 +1,5 @@
 function createKey(name) {
-  return `lootpark:${name}`;
+  return `portfolio:${name}`;
 }
 
 function getStorage() {

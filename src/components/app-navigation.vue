@@ -1,17 +1,17 @@
 <template>
   <nav class="navigation">
     <div class="navigation__links">
-      <span class="navigation__link navigation__link--active" @click="$emit('jump', 'navigation')">{{ $t('welcome:navigation.home') }}</span>
-      <span class="navigation__link" @click="$emit('jump', 'projects')">{{ $t('welcome:navigation.projects') }}</span>
-      <span class="navigation__link" @click="$emit('jump', 'about-me')">{{ $t('welcome:navigation.about') }}</span>
+      <span class="navigation__link navigation__link--active" @click="$emit('jump', 'navigation')">{{ $t('navigation:home') }}</span>
+      <span class="navigation__link" @click="$emit('jump', 'projects')">{{ $t('navigation:projects') }}</span>
+      <span class="navigation__link" @click="$emit('jump', 'about-me')">{{ $t('navigation:about') }}</span>
     </div>
 
     <div class="navigation__links navigation__links--short">
       <span class="navigation__link navigation__link--active" @click="$emit('jump', 'navigation')">
         <font-awesome-icon icon="home"></font-awesome-icon>
       </span>
-      <span class="navigation__link" @click="$emit('jump', 'projects')">{{ $t('welcome:navigation.projects') }}</span>
-      <span class="navigation__link" @click="$emit('jump', 'about-me')">{{ $t('welcome:navigation.about-short') }}</span>
+      <span class="navigation__link" @click="$emit('jump', 'projects')">{{ $t('navigation:projects') }}</span>
+      <span class="navigation__link" @click="$emit('jump', 'about-me')">{{ $t('navigation:about-short') }}</span>
     </div>
 
     <div class="navigation__icons">

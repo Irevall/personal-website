@@ -1,6 +1,6 @@
 <template>
   <main @wheel="scrollListener">
-    <navigation ref="navigation" @jump="jumpTo"/>
+    <app-navigation ref="navigation" @jump="jumpTo"/>
     <app-welcome ref="welcome" @jump="jumpTo"/>
     <app-projects ref="projects"/>
     <app-about-me ref="about-me"/>
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-  import Navigation from '@/components/navigation/navigation';
+  import AppNavigation from '@/components/app-navigation';
   import AppWelcome from '@/components/app-welcome';
   import AppProjects from '@/components/app-projects';
   import AppAboutMe from '@/components/app-about-me';
 
   export default {
     name: 'view-home',
-    components: { Navigation, AppWelcome, AppProjects, AppAboutMe },
+    components: { AppNavigation, AppWelcome, AppProjects, AppAboutMe },
     methods: {
       jumpTo(target) {
         this.$refs[target].$el.scrollIntoView({behavior: 'smooth'});

@@ -33,14 +33,14 @@
       }
     },
     computed: {
-      language () {
+      language() {
         return this.languages[this.languageCode];
       }
     },
-    mounted () {
+    mounted() {
       window.addEventListener('click', this.onBackgroundClick);
     },
-    beforeDestroy () {
+    beforeDestroy() {
       window.removeEventListener('click', this.onBackgroundClick);
     },
     methods: {
@@ -48,7 +48,7 @@
         await this.$i18n.i18next.changeLanguage(language.code);
         this.languageCode = this.$i18n.i18next.language;
       },
-      toggle () {
+      toggle() {
         const isActive = !this.isActive;
         setImmediate(() => this.isActive = isActive);
       },
