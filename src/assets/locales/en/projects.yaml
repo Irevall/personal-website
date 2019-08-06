@@ -1,0 +1,34 @@
+title: Projects overview
+
+professional:
+  title: Work projects
+  projects:
+    - name: Lootpark
+      url: https://lootpark.com
+      description: Case opening website, in theme of very popular game
+
+    - name: Rocket Swaps
+      url: https://rocketswaps.com/
+      description: Trading website for ingame items from Rocket League
+
+personal:
+  title: Personal projects
+  description:
+    - All (and more) of thse projects are available on my {{0}}.
+    - Unfortunately, most of them weren't updated for over a year, so it hardly reflects on my current code.
+  projects:
+    - name: Portfolio
+      url: https://portfolio.irevall.me
+      description: It's this site! :D
+
+    - name: Apothes
+      url: https://github.com/Irevall/apothes
+      description: Image uploading and cropping
+
+    - name: TERA data parser
+      url: https://github.com/Irevall/TERA-data-parser
+      description: Old CRUD project for ingame data
+
+    - name: Snake game
+      url: https://github.com/Irevall/snake-game
+      description: Simple and (hopefully still) optimized

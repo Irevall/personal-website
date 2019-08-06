@@ -1,0 +1,33 @@
+title: O mnie
+text: I'm still very much a beginner, but I'm doing my best to improve after each task.
+  I take code reviews very seriously and try to understand and implement each suggestion.
+  I don't have any strong preference between Front and Back end (or both), although I'm not nearly as efficient as
+  Front end developer without some sort of design ready.
+
+frontend:
+  title: Frontend
+  list:
+    - Vue.js
+    - Vuex
+    - JavaScript (ES6)
+    - Websocket
+    - i18n
+    - Webpack
+
+backend:
+  title: Backend
+  list:
+    - Node.js
+    - TypeScript
+    - TypeORM
+    - Koa.js
+    - MySQL
+    - Redis
+
+misc:
+  title: Misc
+  list:
+    - Polish (Native)
+    - English (Advanced)
+    - Git
+    - JIRA
