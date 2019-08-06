@@ -1,14 +1,13 @@
 <template>
-  <div class="app-welcome" @wheel="scrollListener">
-    <navigation class="app-welcome__navigation"/>
+  <div class="app-welcome">
     <div class="app-welcome__content">
       <div class="app-welcome__photo">
         <img src="/home-photo.png"/>
       </div>
       <div class="app-welcome__text">
         <span class="app-welcome__title">Kuba Marek</span>
-        <span class="app-welcome__welcome">{{ $t('welcome:welcome') }}</span>
-        <span class="app-welcome__welcome-rest">{{ $t('welcome:welcome-rest') }}</span>
+        <span class="app-welcome__subtitle">Junior Full Stack Developer <br/> Vue.js & Node.js</span>
+        <span class="app-welcome__description">{{ $t('welcome:text') }}</span>
         <span class="app-welcome__contact">
           {{ $t('welcome:contact') }}:
           <a target="_blank" href="mailto:kjm@irevall.me" class="mail">kjm@irevall.me</a>
@@ -19,37 +18,35 @@
 </template>
 
 <script>
-  import Navigation from '@/components/navigation/navigation';
-
   export default {
     name: 'app-welcome',
-    components: { Navigation },
     data () {
       return {
         scrolling: false,
       }
     },
-    methods: {
-      scrollListener(event) {
-        if (event.deltaY > 0) {
-          event.preventDefault();
-          this.$emit('jump', 'projects');
-        }
-      },
-    }
   };
 </script>
 
 <style lang="scss">
   .app-welcome {
-    min-height: 100vh;
+    padding-top: 4rem;
+    min-height: calc(100vh - 8rem);
+
+    @include laptop-xsmall {
+      padding-top: 2rem;
+    }
   }
 
   .app-welcome__content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 1rem;
+
+    @include laptop-xsmall {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .app-welcome__photo {
@@ -67,19 +64,44 @@
     font-family: 'Dosis', sans-serif;
     font-size: 6rem;
     font-weight: 500;
-    margin-bottom: 1.75rem;
+    line-height: 1;
+
+    @include laptop-xsmall {
+      text-align: center;
+    }
+  }
+
+  .app-welcome__subtitle {
+    font-family: 'Dosis', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
   }
 
   .app-welcome__text {
     display: flex;
     flex-direction: column;
     max-width: 550px;
+    text-align: justify;
     padding-right: calc((200px + 3rem) / 2); // nullify photo, keep text in center
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 400;
+
+    @include laptop-xsmall {
+      padding: 0;
+    }
+
+    @include mobile {
+      width: auto;
+      padding: 0 2rem;
+    }
+  }
+
+  .app-welcome__description {
+    line-height: 1.25;
   }
 
   .app-welcome__contact, .app-welcome__welcome-rest {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
   }
 </style>

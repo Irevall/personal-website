@@ -2,13 +2,13 @@
   <div class="navigation-language-menu" :class="{ 'navigation-language-menu--active': isActive }" @click="toggle">
     <div class="navigation-language-menu__header">
       <img class="navigation-language-menu__language" :src="language.flag" :alt="language.name"/>
+      <font-awesome-icon icon="chevron-down" class="navigation-language-menu__caret"></font-awesome-icon>
     </div>
-    <font-awesome-icon icon="chevron-down" class="navigation-language-menu__caret"></font-awesome-icon>
 
     <transition name="navigation-language-menu__dropdown">
       <div class="navigation-language-menu__dropdown-list" v-show="isActive">
-        <div class="navigation-language-menu__dropdown-item" v-for="language in languages">
-          <img  class="navigation-language-menu__language" :key="language.code"  :src="language.flag" :alt="language.code" @click="selectLanguage(language)"/>
+        <div class="navigation-language-menu__dropdown-item" v-for="language in languages" :key="language.code" @click="selectLanguage(language)">
+          <img  class="navigation-language-menu__language" :src="language.flag" :alt="language.code"/>
           <span class="navigation-language-menu__language-name">{{ language.name }}</span>
         </div>
       </div>
@@ -67,7 +67,8 @@
   }
 
   .navigation-language-menu__header {
-    display: flex;
+    @include flex-center;
+    cursor: pointer;
   }
 
   .navigation-language-menu__caret {
@@ -118,7 +119,7 @@
     right: -1rem;
     top: 2.25rem;
     width: 10rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.75rem;
     z-index: 10;
     background-color: #344155;
     border-radius: 0.55rem;
@@ -134,18 +135,7 @@
       border-left: 0.5rem solid transparent;
     }
 
-    @include desktop-small {
-      right: calc(-10.1875rem / 2 + 1.25rem);
-    }
-
-    @include mobile-big {
-      right: calc(-10.1875rem / 2 + 0.75rem);
-    }
-
     @include mobile {
-      width: 9.5rem;
-      right: -0.75rem;
-      top: 2.5rem;
 
       &:before {
         right: 1rem;
@@ -157,7 +147,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.25rem 0;
+    padding: 0.5rem 0;
+    cursor: pointer;
    }
 
   .navigation-language-menu__language-name {

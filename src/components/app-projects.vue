@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2.5rem;
   }
 
   .app-projects__title {
@@ -54,6 +55,14 @@
 
     --project-width: 450px;
     --project-subtitle-font-size: 3rem;
+
+    @include laptop-xsmall {
+      --project-width: 400px;
+    }
+
+    @include mobile {
+      --project-width: 300px;
+    }
   }
 
   .app-projects__personal {
@@ -66,6 +75,19 @@
 
     > .app-projects__section-title {
       grid-column: 1 / span 2;
+    }
+
+    @include laptop-xsmall {
+      grid-template-columns: 1fr;
+      --project-width: 400px;
+
+      > .app-projects__section-title {
+        grid-column: 1;
+      }
+    }
+
+    @include mobile {
+      --project-width: 300px;
     }
   }
 

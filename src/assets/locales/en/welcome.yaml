@@ -1,8 +1,11 @@
-welcome: Welcome to my portfolio.
-welcome-rest: I'm a web developer, focused on JavaScript and Node. I'm looking for work as a Junior dev, in Wroclaw or remotely.
+text: I have slightly over 6 months of work experience.
+  I'm a pretty happy with my current stack, but I'm open to learning new technologies, like React or Django.
+  Currently looking for work in Wrocław.
+
 contact: Contact
 
 navigation:
   home: Home
   projects: Projects
   about: About me
+  about-short: About

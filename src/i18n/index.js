@@ -15,7 +15,8 @@ i18next
     whitelist: ['en', 'pl'],
     load: 'languageOnly',
     debug: !PRODUCTION,
-    resources: locales
+    resources: locales,
+    interpolation: { escapeValue: false }
   });
 
 export default new VueI18Next(i18next);

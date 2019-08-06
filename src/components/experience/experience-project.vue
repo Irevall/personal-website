@@ -22,7 +22,6 @@
         default: false,
         required: false,
       },
-      // imageUrl: String,
     },
     data() {
       return {
@@ -98,8 +97,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: calc(100% - 4rem);
     height: 100%;
+    padding: 0 2rem;
     z-index: 2;
   }
 
