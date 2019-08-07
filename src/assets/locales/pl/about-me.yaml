@@ -1,11 +1,11 @@
 title: O mnie
-text: I'm still very much a beginner, but I'm doing my best to improve after each task.
-  I take code reviews very seriously and try to understand and implement each suggestion.
-  I don't have any strong preference between Front and Back end (or both), although I'm not nearly as efficient as
-  Front end developer without some sort of design ready.
+text: Wciąż jeszcze się uczę, ale staram się poprawiać swój kod po każdym wykonanym zadaniu.
+  Każde code review biorę na poważnie i staram się zrozumieć i wprowadzić zasugerowane zmiany.
+  Nie posiadam preferencji pomiędzy Front, a Back end (bądź Full stack),
+  jednak czasem ciężko mi tworzyć Front end bez gotowego designu.
 
 frontend:
-  title: Frontend
+  title: Front end
   list:
     - Vue.js
     - Vuex
@@ -15,7 +15,7 @@ frontend:
     - Webpack
 
 backend:
-  title: Backend
+  title: Back end
   list:
     - Node.js
     - TypeScript
@@ -27,7 +27,7 @@ backend:
 misc:
   title: Misc
   list:
-    - Polish (Native)
-    - English (Advanced)
+    - Polski (ojczysty)
+    - Angielski (zaawansowany)
     - Git
     - JIRA
