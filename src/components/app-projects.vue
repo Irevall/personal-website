@@ -21,10 +21,10 @@
     components: { ProjectsProject },
     computed: {
       professionalProjects() {
-        return this.$i18n.t('projects:professional.projects', { returnObjects: true });
+        return this.$t('projects:professional.projects', { returnObjects: true });
       },
       personalProjects() {
-        return this.$i18n.t('projects:personal.projects', { returnObjects: true });
+        return this.$t('projects:personal.projects', { returnObjects: true });
       }
     },
     methods: {

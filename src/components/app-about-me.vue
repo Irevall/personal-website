@@ -34,13 +34,13 @@
     name: 'app-about-me',
     computed: {
       frontendList() {
-        return this.$i18n.t('about-me:frontend.list', { returnObjects: true });
+        return this.$t('about-me:frontend.list', { returnObjects: true });
       },
       backendList() {
-        return this.$i18n.t('about-me:backend.list', { returnObjects: true });
+        return this.$t('about-me:backend.list', { returnObjects: true });
       },
       miscList() {
-        return this.$i18n.t('about-me:misc.list', { returnObjects: true });
+        return this.$t('about-me:misc.list', { returnObjects: true });
       },
     },
   };
