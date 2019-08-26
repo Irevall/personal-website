@@ -18,8 +18,16 @@ personal:
     - Unfortunately, most of them weren't updated for over a year, so it hardly reflects on my current code.
   projects:
     - name: Portfolio
-      url: https://portfolio.irevall.me
+      url: https://github.com/Irevall/portfolio.irevall.me
       description: Oto i ono! :D
+
+    - name: React Awakens
+      url: https://github.com/Irevall/react-awakens
+      description: Filmy z Gwiezdnch Wojen, React and MobX
+
+    - name: Mockup shop
+      url: https://github.com/Irevall/frontend-recruitment-task-08.19
+      description: Zadanie rekrutacyjne, makieta małego sklepu, Vue and Vuex
 
     - name: Apothes
       url: https://github.com/Irevall/apothes
