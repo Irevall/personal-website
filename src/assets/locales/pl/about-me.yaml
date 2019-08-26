@@ -7,8 +7,8 @@ text: Wciąż jeszcze się uczę, ale staram się poprawiać swój kod po każdy
 frontend:
   title: Front end
   list:
-    - Vue.js
-    - Vuex
+    - Vue.js, Vuex
+    - React, MobX
     - JavaScript (ES6)
     - Websocket
     - i18n
