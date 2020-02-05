@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --hot --open -env development"
   },
   "dependencies": {
-    "@panter/vue-i18next": "^0.14.0",
+    "@panter/vue-i18next": "^0.15.2",
     "i18next": "^14.0.1",
     "svg-country-flags": "^1.2.6",
     "vue": "^2.5.21",
