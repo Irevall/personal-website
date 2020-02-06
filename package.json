@@ -9,7 +9,7 @@
     "@panter/vue-i18next": "^0.14.0",
     "i18next": "^14.0.1",
     "svg-country-flags": "^1.2.6",
-    "vue": "^2.5.21",
+    "vue": "^2.6.11",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
     "url-loader": "^1.1.2",
     "vue-loader": "^15.5.1",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.5.21",
+    "vue-template-compiler": "^2.6.11",
     "webpack": "^4.28.1",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
