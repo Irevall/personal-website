@@ -16,7 +16,7 @@
     "@alienfast/i18next-loader": "^1.0.18",
     "@babel/core": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.12.16",
     "@fortawesome/fontawesome-svg-core": "^1.2.20",
     "@fortawesome/free-brands-svg-icons": "^5.10.0",
     "@fortawesome/free-regular-svg-icons": "^5.10.0",
